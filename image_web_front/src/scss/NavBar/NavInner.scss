@@ -1,0 +1,15 @@
+.nav-list {
+	display: flex;
+}
+
+.nav-item {
+	display: none;
+}
+
+.nav-list[data-login="true"] .menu-mypage {
+	display: block;
+}
+
+.nav-list[data-login="false"] .menu-login {
+	display: block;
+}
