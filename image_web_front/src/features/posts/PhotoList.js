@@ -1,5 +1,6 @@
 import React from 'react';
 import PhotoItem from './PhotoItem';
+import '../../scss/Posts/PhotoList.scss';
 
 const PhotoList = ({data}) => {
 	return (

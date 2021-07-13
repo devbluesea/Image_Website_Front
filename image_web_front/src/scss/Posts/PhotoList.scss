@@ -1,0 +1,57 @@
+.photoList-template {
+	--photoList-width: 950px;
+	--photoList-height: 1500px;
+}
+
+.photoList-template .wrapper {
+	background: aquamarine;
+	padding: 20px 0 0 0;
+}
+
+.photoList-template .wrapper .frame {
+	display: flex;
+	margin: 0 auto 0 auto;
+	width: var(--photoList-width);
+	justify-content: space-around;
+	flex-wrap: wrap;
+	overflow: visible;
+	background: blue;
+}
+
+
+//.CardViewList-wrapper {
+//	display: flex;
+//	justify-content: space-around;
+//	flex-wrap: wrap;
+//	overflow: visible;
+//}
+
+//.CardViewListItem-wrapper {
+//	--shadow-color: #00000029;
+//	--cardview-width: 250px;
+//	--cardview-height: 411px;
+//	--cardview-photo-height: (var(--cardview-height) - 130)px;
+
+//	box-shadow: 3px 3px 10px 0 var(--shadow-color);
+//	width: var(--cardview-width);
+//	height: var(--cardview-height);
+//	border-radius: 20px;
+//	position: relative;
+//	margin-top: 20px;
+//	&:hover {
+//		background: #ececec;
+//		transition: 0.5s;
+//		.CardViewListItem-img {
+//			filter: brightness(80%);
+//			transition: 0.5s;
+//		}
+//	}
+
+//	.CardViewListItem-thumbnail {
+//		position: relative;
+
+//		.CardViewListItem-img {
+//			width: var(--cardview-width);
+//			height: 277px;
+//			border-radius: 20px 20px 0 0;
+//		}

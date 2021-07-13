@@ -1,3 +1,10 @@
+.PhotoItem-template {
+	//display: flex;
+}
+
 .PhotoItem-template .Picture {
 	width: 300px;
+	cursor: pointer;
+	&:hover {
+	}
 }

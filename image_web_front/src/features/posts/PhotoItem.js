@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../scss/Posts/PhotoItem.scss'
+import '../../scss/Posts/PhotoItem.scss';
 
 const PhotoItem = ({ image_url }) => {
 	return (
