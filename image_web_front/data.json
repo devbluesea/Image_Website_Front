@@ -34,27 +34,6 @@
       "nickname": "팅우",
       "password": "111",
       "id": 11
-    },
-    {
-      "email": "15@naver.com",
-      "name": "백승우",
-      "nickname": "hyun1",
-      "password": "sdsdsf",
-      "id": 12
-    },
-    {
-      "email": "br1996ay@gmail.com",
-      "name": "백승우",
-      "nickname": "hyun1",
-      "password": "1",
-      "id": 13
-    },
-    {
-      "email": "br1997ay@gmail.com",
-      "name": "승우",
-      "nickname": "백",
-      "password": "1",
-      "id": 14
     }
   ],
   "posts": [

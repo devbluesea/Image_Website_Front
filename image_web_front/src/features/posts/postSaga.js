@@ -1,4 +1,4 @@
-import { call, takeLatest, put, all, fork, select, delay } from "redux-saga/effects";
+import { call, takeLatest, put, all, fork } from "redux-saga/effects";
 import { postsAction } from './postSlice';
 import * as postsApi from '../../api/posts';
 

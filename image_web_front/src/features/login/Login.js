@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 import { LoginForm } from '../../util/LoginRegitsterForm';
 import { useDispatch } from 'react-redux';
 import { usersAction } from '../users/usersSlice';
@@ -31,6 +32,10 @@ const Login = () => {
 				</div>
 				<div className="submit">
 					<button className="login-btn" onClick={() => {handleLoginBtnClick(loginForm)}}>로그인</button>
+				</div>
+				<div>
+					<span>계정이 없으신가요?</span>
+					<Link to="/signup"><span>회원가입</span></Link>
 				</div>
 			</div>
 		</div>

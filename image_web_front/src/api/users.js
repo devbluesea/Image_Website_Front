@@ -9,5 +9,5 @@ export const addUsers = (data) => {
 }
 
 export const getUsers = (data) => {
-	return axios.post(`http://${post_URL}:${port}/${post_Route}`, { params : data});
+	return axios.get(`http://${post_URL}:${port}/${post_Route}`, { params : data});
 }
