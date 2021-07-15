@@ -4,3 +4,8 @@ export const RegisterForm = {
 		nickname: "",
 		password: ""
 	}
+
+export const LoginForm = {
+	email: "",
+	password: ""
+}
