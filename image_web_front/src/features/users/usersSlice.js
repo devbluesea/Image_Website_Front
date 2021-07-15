@@ -5,7 +5,7 @@ const name = "users";
 
 const initialState = {
 	isLogin : false,
-	users : reducerUtils.initial()
+	userData : reducerUtils.initial()
 };
 
 const slice = createSlice({

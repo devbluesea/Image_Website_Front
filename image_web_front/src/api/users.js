@@ -7,3 +7,7 @@ const post_Route = "users";
 export const addUsers = (data) => {
 	return axios.post(`http://${post_URL}:${port}/${post_Route}`, data);
 }
+
+export const getUsers = (data) => {
+	return axios.post(`http://${post_URL}:${port}/${post_Route}`, { params : data});
+}

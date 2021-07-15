@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { LoginForm } from '../../util/LoginRegitsterForm';
+import { useDispatch } from 'react-redux';
+import { usersAction } from '../users/usersSlice';
 
 const Login = () => {
 	const [loginForm, setLoginForm] = useState(LoginForm);
@@ -12,8 +14,10 @@ const Login = () => {
 		});
 	};
 
-	const handleLoginBtnClick = () => {
-		console.log(loginForm)
+	const dispatch = useDispatch()
+
+	const handleLoginBtnClick = (data) => {
+		dispatch(usersAction.getUsers(data))
 	}
 
 	return (
@@ -26,7 +30,7 @@ const Login = () => {
 					<input className="password-input" placeholder="비밀번호" name="password" value={loginForm.password} onChange={handleChangeForm}/>
 				</div>
 				<div className="submit">
-					<button className="login-btn" onClick={() => {handleLoginBtnClick()}}>로그인</button>
+					<button className="login-btn" onClick={() => {handleLoginBtnClick(loginForm)}}>로그인</button>
 				</div>
 			</div>
 		</div>
