@@ -4,9 +4,12 @@ import { all, call } from 'redux-saga/effects';
 import logger from 'redux-logger';
 import { postsReducer, POSTS} from '../features/posts/postSlice';
 import { postsSaga } from '../features/posts/postSaga'
+import { usersReducer, USERS } from "../features/users/usersSlice";
+import { usersSaga } from "../features/users/usersSaga";
 
 export const rootReducer = combineReducers ({
-	[POSTS] : postsReducer
+	[POSTS] : postsReducer,
+	[USERS] : usersReducer
 });
 
 const sagaMiddleware = createSagaMiddleware();
@@ -14,6 +17,7 @@ const sagaMiddleware = createSagaMiddleware();
 function* rootSaga() {
 	yield all([
 		call(postsSaga),
+		call(usersSaga)
 	])
 }
 

@@ -1,84 +1,108 @@
 {
-	"users": [
-	  {
-		"id": 1,
-		"email": "test1@naver.com",
-		"name": "테스트유저1",
-		"nickname": "헬로",
-		"password": "1234"
-	  },
-	  {
-		"id": 2,
-		"email": "test2@naver.com",
-		"name": "테스트유저2",
-		"nickname": "하이",
-		"password": "5678"
-	  },
-	  {
-		"email": "test3@naver.com",
-		"name": "1111",
-		"nickname": "1111",
-		"password": "23232",
-		"id": 9
-	  },
-	  {
-		"email": "test3@naver.com",
-		"name": "첫번째 제품",
-		"nickname": "2223",
-		"password": "342321312",
-		"id": 10
-	  }
-	],
-	"posts": [
-	  {
-		"id": 1,
-		"image_url": "https://picsum.photos/id/1/1080/1080",
-		"comment": "안녕하세요11"
-	  },
-	  {
-		"id": 2,
-		"image_url": "https://picsum.photos/id/2/1080/1080",
-		"comment": "안녕하세요22"
-	  },
-	  {
-		"id": 3,
-		"image_url": "https://picsum.photos/id/3/1080/1080",
-		"comment": "안녕하세요33"
-	  },
-	  {
-		"id": 4,
-		"image_url": "https://picsum.photos/id/4/1080/1080",
-		"comment": "안녕하세요44"
-	  },
-	  {
-		"id": 5,
-		"image_url": "https://picsum.photos/id/5/1080/1080",
-		"comment": "안녕하세요55"
-	  },
-	  {
-		"id": 6,
-		"image_url": "https://picsum.photos/id/6/1080/1080",
-		"comment": "안녕하세요66"
-	  },
-	  {
-		"id": 7,
-		"image_url": "https://picsum.photos/id/7/1080/1080",
-		"comment": "안녕하세요77"
-	  },
-	  {
-		"id": 8,
-		"image_url": "https://picsum.photos/id/8/1080/1080",
-		"comment": "안녕하세요88"
-	  },
-	  {
-		"id": 9,
-		"image_url": "https://picsum.photos/id/9/1080/1080",
-		"comment": "안녕하세요99"
-	  },
-	  {
-		"id": 10,
-		"image_url": "https://picsum.photos/id/10/1080/1080",
-		"comment": "안녕하세요1010"
-	  }
-	]
-  }
+  "users": [
+    {
+      "id": 1,
+      "email": "test1@naver.com",
+      "name": "테스트유저1",
+      "nickname": "헬로",
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "email": "test2@naver.com",
+      "name": "테스트유저2",
+      "nickname": "하이",
+      "password": "5678"
+    },
+    {
+      "email": "test3@naver.com",
+      "name": "1111",
+      "nickname": "1111",
+      "password": "23232",
+      "id": 9
+    },
+    {
+      "email": "test3@naver.com",
+      "name": "첫번째 제품",
+      "nickname": "2223",
+      "password": "342321312",
+      "id": 10
+    },
+    {
+      "email": "br1992ay@gmail.com",
+      "name": "백승우",
+      "nickname": "팅우",
+      "password": "111",
+      "id": 11
+    },
+    {
+      "email": "br1992ay@gmail.com",
+      "name": "백승우",
+      "nickname": "별명wad",
+      "password": "sdsdsf",
+      "id": 12
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "image_url": "https://picsum.photos/id/1/1080/1080",
+      "comment": "안녕하세요11"
+    },
+    {
+      "id": 2,
+      "image_url": "https://picsum.photos/id/2/1080/1080",
+      "comment": "안녕하세요22"
+    },
+    {
+      "id": 3,
+      "image_url": "https://picsum.photos/id/3/1080/1080",
+      "comment": "안녕하세요33"
+    },
+    {
+      "id": 4,
+      "image_url": "https://picsum.photos/id/4/1080/1080",
+      "comment": "안녕하세요44"
+    },
+    {
+      "id": 5,
+      "image_url": "https://picsum.photos/id/5/1080/1080",
+      "comment": "안녕하세요55"
+    },
+    {
+      "id": 6,
+      "image_url": "https://picsum.photos/id/6/1080/1080",
+      "comment": "안녕하세요66"
+    },
+    {
+      "id": 7,
+      "image_url": "https://picsum.photos/id/7/1080/1080",
+      "comment": "안녕하세요77"
+    },
+    {
+      "id": 8,
+      "image_url": "https://picsum.photos/id/8/1080/1080",
+      "comment": "안녕하세요88"
+    },
+    {
+      "id": 9,
+      "image_url": "https://picsum.photos/id/9/1080/1080",
+      "comment": "안녕하세요99"
+    },
+    {
+      "id": 10,
+      "image_url": "https://picsum.photos/id/10/1080/1080",
+      "comment": "안녕하세요1010"
+    },
+    {
+      "id": 11,
+      "image_url": "https://picsum.photos/id/10/1080/1080",
+      "comment": "안녕하세요1111"
+    },
+    {
+      "id": 12,
+      "image_url": "https://picsum.photos/id/10/1080/1080",
+      "comment": "안녕하세요1212"
+    }
+  ]
+}
