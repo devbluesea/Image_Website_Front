@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 import { reducerUtils } from '../../util/async.utill';
 
 const initialState = {
-	posts : reducerUtils.initial()
+	posts : reducerUtils.initial(),
+	keyword : null
 }
 
 const name = "posts";
@@ -11,6 +12,9 @@ const slice = createSlice({
 	name,
 	initialState,
 	reducers : {
+		setKeyword( state, {payload}) {
+			state.keyword = payload.data
+		},
 		getPosts( state ) {
 			state.posts = reducerUtils.loading()
 		},

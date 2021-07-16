@@ -38,64 +38,58 @@
   ],
   "posts": [
     {
-      "id": 1,
-      "image_url": "https://picsum.photos/id/1/1080/1080",
-      "comment": "안녕하세요11"
+      "image_url": "http://localhost:3000/upload_img/img-1626457738825.jpeg",
+      "comment": "예시이미지",
+      "tag": "그린",
+      "id": 1
     },
     {
-      "id": 2,
-      "image_url": "https://picsum.photos/id/2/1080/1080",
-      "comment": "안녕하세요22"
+      "image_url": "http://localhost:3000/upload_img/img-1626457738825.jpeg",
+      "comment": "예시이미지2",
+      "tag": "그린",
+      "id": 2
     },
     {
-      "id": 3,
-      "image_url": "https://picsum.photos/id/3/1080/1080",
-      "comment": "안녕하세요33"
+      "image_url": "http://localhost:3000/upload_img/img-1626457768088.jpeg",
+      "comment": "예시이미지3",
+      "tag": "블루",
+      "id": 3
     },
     {
-      "id": 4,
-      "image_url": "https://picsum.photos/id/4/1080/1080",
-      "comment": "안녕하세요44"
+      "image_url": "http://localhost:3000/upload_img/img-1626457785909.jpeg",
+      "comment": "예시이미지4",
+      "tag": "블루",
+      "id": 4
     },
     {
-      "id": 5,
-      "image_url": "https://picsum.photos/id/5/1080/1080",
-      "comment": "안녕하세요55"
+      "image_url": "http://localhost:3000/upload_img/img-1626457800384.jpeg",
+      "comment": "예시이미지5",
+      "tag": "레드",
+      "id": 5
     },
     {
-      "id": 6,
-      "image_url": "https://picsum.photos/id/6/1080/1080",
-      "comment": "안녕하세요66"
+      "image_url": "http://localhost:3000/upload_img/img-1626457823424.jpeg",
+      "comment": "예시이미지5",
+      "tag": "레드",
+      "id": 6
     },
     {
-      "id": 7,
-      "image_url": "https://picsum.photos/id/7/1080/1080",
-      "comment": "안녕하세요77"
+      "image_url": "http://localhost:3000/upload_img/img-1626457836654.jpeg",
+      "comment": "예시이미지5",
+      "tag": "레드",
+      "id": 7
     },
     {
-      "id": 8,
-      "image_url": "https://picsum.photos/id/8/1080/1080",
-      "comment": "안녕하세요88"
+      "image_url": "http://localhost:3000/upload_img/img-1626457854361.jpeg",
+      "comment": "예시이미지8",
+      "tag": "화이트",
+      "id": 8
     },
     {
-      "id": 9,
-      "image_url": "https://picsum.photos/id/9/1080/1080",
-      "comment": "안녕하세요99"
-    },
-    {
-      "id": 10,
-      "image_url": "https://picsum.photos/id/10/1080/1080",
-      "comment": "안녕하세요1010"
-    },
-    {
-      "id": 11,
-      "image_url": "https://picsum.photos/id/10/1080/1080",
-      "comment": "안녕하세요1111"
-    },
-    {
-      "image_url": "http://localhost:3000/upload_img/img-1626431150204.jpeg",
-      "comment": "hello",
-      "id": 12
+      "image_url": "http://localhost:3000/upload_img/img-1626457879178.jpeg",
+      "comment": "예시이미지8",
+      "tag": "베이지",
+      "id": 9
     }
   ]
 }

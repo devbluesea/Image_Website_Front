@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PhotoItem from './PhotoItem';
 import Modal from './Modal';
+import Search from './Search';
 import '../../scss/Posts/PhotoList.scss';
 
 const PhotoList = ({data}) => {
@@ -16,6 +17,9 @@ const PhotoList = ({data}) => {
 	return (
 		<div className="photoList-template">
 			<div className="wrapper">
+				<div>
+					<Search></Search>
+				</div>
 				<div className="frame">{ data.map((post, key) => {
 					return <PhotoItem key={key}
 														image_url = {post.image_url}

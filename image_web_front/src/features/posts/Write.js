@@ -46,7 +46,8 @@ const Write = () => {
 					<button onClick={() => {handleChangeForm(upLoadFileForm)}}>이미지 업로드</button>
 				</div>
 				<div>
-					<textarea name="comment" value={postForm.comment} onChange={handleCommentChange}/>
+					<div><textarea name="comment" value={postForm.comment} onChange={handleCommentChange}/></div>
+					<div><textarea name="tag" value={postForm.tag} onChange={handleCommentChange}/></div>
 					<button onClick={() => {handleWriteSubmit()}}>글쓰기</button>
 				</div>
 			{/*</form>*/}

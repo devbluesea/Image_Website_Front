@@ -16,5 +16,10 @@ export const UploadForm = {
 
 export const PostForm = {
 	image_url: "",
-	comment: ""
+	comment: "",
+	tag:""
+}
+
+export const SearchForm = {
+	tag: ""
 }
