@@ -3,7 +3,8 @@ import { reducerUtils } from '../../util/async.utill';
 
 const initialState = {
 	posts : reducerUtils.initial(),
-	keyword : null
+	keyword : null,
+	current_page : 1,
 }
 
 const name = "posts";
@@ -23,6 +24,9 @@ const slice = createSlice({
 		},
 		getPostsError( state, { payload }) {
 			state.posts = reducerUtils.error(payload)
+		},
+		setCurrentPage( state, {payload}) {
+			state.current_page = payload
 		}
 	}
 })

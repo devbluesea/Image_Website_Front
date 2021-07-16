@@ -90,6 +90,42 @@
       "comment": "예시이미지8",
       "tag": "베이지",
       "id": 9
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1626468889259.jpeg",
+      "comment": "10번째 글",
+      "tag": "베이지",
+      "id": 10
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1626468911636.jpeg",
+      "comment": "11번째 글",
+      "tag": "옐로우",
+      "id": 11
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1626468933306.jpeg",
+      "comment": "12번째 글",
+      "tag": "베이지",
+      "id": 12
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1626468953368.jpeg",
+      "comment": "13번째 글",
+      "tag": "블랙",
+      "id": 13
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1626468965036.jpeg",
+      "comment": "14번째 글",
+      "tag": "베이지",
+      "id": 14
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1626468981921.jpeg",
+      "comment": "15번째 글",
+      "tag": "화이트",
+      "id": 15
     }
   ]
 }
