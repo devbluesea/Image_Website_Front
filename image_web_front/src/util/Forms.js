@@ -13,3 +13,8 @@ export const LoginForm = {
 export const UploadForm = {
 	imageUpLoad: {},
 }
+
+export const PostForm = {
+	image_url: "",
+	comment: ""
+}

@@ -93,9 +93,9 @@
       "comment": "안녕하세요1111"
     },
     {
-      "id": 12,
-      "image_url": "https://picsum.photos/id/10/1080/1080",
-      "comment": "안녕하세요1212"
+      "image_url": "http://localhost:3000/upload_img/img-1626431150204.jpeg",
+      "comment": "hello",
+      "id": 12
     }
   ]
 }

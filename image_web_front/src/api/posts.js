@@ -8,6 +8,10 @@ export const getPosts = () => {
 	return axios.get(`http://${URL}:${get_port}/${get_Route}`);
 }
 
+export const addPosts = (data) => {
+	return axios.post(`http://${URL}:${get_port}/${get_Route}`, data)
+}
+
 const image_port = 7000;
 const Image_Route = "uploads";
 

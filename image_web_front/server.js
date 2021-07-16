@@ -3,10 +3,8 @@ const path = require('path');
 const multer = require('multer');
 const cors = require('cors');
 
-//이미지 저장되는 위치 설정
 let uploadDir = path.join( __dirname , './public/upload_img' );
 
-//multer 셋팅
 let storage = multer.diskStorage({
     destination : (req, file, callback) => {
         callback(null, uploadDir );

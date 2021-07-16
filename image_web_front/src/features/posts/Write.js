@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { UploadForm } from '../../util/Forms';
-import { addPostsImage } from '../../api/posts';
+import { UploadForm, PostForm } from '../../util/Forms';
+import { addPostsImage, addPosts } from '../../api/posts';
 
 const Write = () => {
-	const [upLoadFileForm, setUpLoadFileForm] = useState(UploadForm)
+	const [upLoadFileForm, setUpLoadFileForm] = useState(UploadForm);
+	const [postForm, setPostForm] = useState(PostForm);
 
 	const handleImageUpload = (e) => {
 		const value = e.target.files;
@@ -11,33 +12,42 @@ const Write = () => {
 			...upLoadFileForm,
 			imageUpLoad: value
 		});
-	}
+	};
 
 	const handleChangeForm = (data) => {
 		const formData = new FormData();
 		formData.append('imageUpload', data.imageUpLoad[0]);
 		addPostsImage(formData).then(res => {
-			console.log(res)
+			setPostForm({
+				...postForm,
+				image_url: `http://localhost:3000/upload_img/${res.data.image_url}`
+			})
 		})
 	};
 
-	const handleWriteSubmit = (form) => {
-		console.log(form)
-		//const prints = document.getElementById('myFile').files;
-		//console.log(prints)
+	const handleCommentChange = (e) => {
+		const {value, name} = e.target;
+		setPostForm({
+			...postForm,
+			[name]: value
+		});
+	}
+
+	const handleWriteSubmit = () => {
+		addPosts(postForm)
 	}
 
 	return (
 		<div>
 			{/*<form>*/}
 				<div>
-					<img src=""/>
-					<input id="myFile" type="file" name="imageUpload" onChange={handleImageUpload}/>
+					{postForm.image_url ? <img src={postForm.image_url} alt="upload_img"/> : ''}
+					<input type="file" name="imageUpload" onChange={handleImageUpload}/>
 					<button onClick={() => {handleChangeForm(upLoadFileForm)}}>이미지 업로드</button>
 				</div>
 				<div>
-					<input/>
-					<button onClick={() => {handleWriteSubmit(upLoadFileForm)}}>글쓰기</button>
+					<textarea name="comment" value={postForm.comment} onChange={handleCommentChange}/>
+					<button onClick={() => {handleWriteSubmit()}}>글쓰기</button>
 				</div>
 			{/*</form>*/}
 		</div>
