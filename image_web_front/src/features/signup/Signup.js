@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { RegisterForm } from '../../util/LoginRegitsterForm';
+import { RegisterForm } from '../../util/Forms';
 import { usersAction } from '../users/usersSlice';
 import { Link } from 'react-router-dom';
 

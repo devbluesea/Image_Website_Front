@@ -11,6 +11,6 @@ export const getPosts = () => {
 const image_port = 7000;
 const Image_Route = "uploads";
 
-export const addPostsImage = () => {
-	return axios.post(`http://${URL}:${image_port}/${Image_Route}`)
+export const addPostsImage = (upLoadData) => {
+	return axios.post(`http://${URL}:${image_port}/${Image_Route}`, upLoadData);
 }

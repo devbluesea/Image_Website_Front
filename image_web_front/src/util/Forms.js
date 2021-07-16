@@ -9,3 +9,7 @@ export const LoginForm = {
 	email: "",
 	password: ""
 }
+
+export const UploadForm = {
+	imageUpLoad: {},
+}
