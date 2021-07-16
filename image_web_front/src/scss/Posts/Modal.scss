@@ -1,0 +1,7 @@
+.modal-template[data-visible="true"] {
+	display: block;
+}
+
+.modal-template[data-visible="false"] {
+	display: none;
+}
