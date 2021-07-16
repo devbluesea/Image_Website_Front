@@ -1,9 +1,16 @@
 import axios from 'axios';
 
-const port = 8000;
-const get_URL = "localhost";
+const get_port = 8000;
+const URL = "localhost";
 const get_Route = "posts";
 
 export const getPosts = () => {
-	return axios.get(`http://${get_URL}:${port}/${get_Route}`);
+	return axios.get(`http://${URL}:${get_port}/${get_Route}`);
+}
+
+const image_port = 7000;
+const Image_Route = "uploads";
+
+export const addPostsImage = () => {
+	return axios.post(`http://${URL}:${image_port}/${Image_Route}`)
 }

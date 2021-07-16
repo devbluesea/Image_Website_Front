@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import Posts from './features/posts/Posts';
 import Signup from './features/signup/Signup';
 import Login from './features/login/Login';
+import Write from './features/posts/Write';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
 			<Route path="/" component={Posts} exact={true} />
 			<Route path="/signup" component={Signup} />
 			<Route path="/login" component={Login} />
+			<Route path="/write" component={Write} />
     </div>
   );
 }
