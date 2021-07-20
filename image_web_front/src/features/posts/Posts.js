@@ -10,11 +10,12 @@ const Posts = () => {
 	const { data, error, loading } = useSelector( (state) => state.posts.posts)
 	const current_page = useSelector((state) => state.posts.current_page);
 	const dispatch = useDispatch();
+	const pageItemNumber = 9;
 
 	useEffect( () => {
 		dispatch(postsAction.getPosts({
 			_page : 1,
-			_limit : 3,
+			_limit : pageItemNumber,
 			_order : 'desc',
 			_sort : 'id'
 		}));
@@ -34,7 +35,7 @@ const Posts = () => {
 		dispatch(
 			postsAction.getPosts({
 				_page ,
-				_limit : 3,
+				_limit : pageItemNumber,
 				_order : 'desc',
 				_sort : 'id'
 			})
@@ -52,9 +53,9 @@ const Posts = () => {
 				<PhotoList data={data}/>
 				<Pagination total_count={totalCount}
 										current_page= {current_page}
-										onSetCurrentPage={onSetCurrentPage}/>
+										onSetCurrentPage={onSetCurrentPage}
+										pageItemNumber = {pageItemNumber}/>
 			</div>
-			{console.log(totalCount)}
 		</div>
 	);
 };

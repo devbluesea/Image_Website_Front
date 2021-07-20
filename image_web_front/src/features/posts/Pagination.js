@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Pagination = ({total_count, current_page, onSetCurrentPage}) => {
-	const page_count = Math.ceil( total_count / 3);
+const Pagination = ({total_count, current_page, onSetCurrentPage, pageItemNumber}) => {
+	const page_count = Math.ceil( total_count / pageItemNumber);
 
 	const pageArray = [];
 	for (let num = 1 ; num <= page_count ; num++) {

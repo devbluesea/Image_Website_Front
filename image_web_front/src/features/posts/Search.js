@@ -19,7 +19,6 @@ const Search = () => {
 
 	const handleSearchClick = ( data ) => {
 		dispatch(postsAction.setKeyword(data));
-		//console.log(searchForm);
 	}
 
 	return (

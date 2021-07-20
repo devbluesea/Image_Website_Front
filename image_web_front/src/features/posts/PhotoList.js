@@ -1,17 +1,26 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import PhotoItem from './PhotoItem';
 import Modal from './Modal';
 import Search from './Search';
 import '../../scss/Posts/PhotoList.scss';
+import { postsAction } from './postSlice';
 
 const PhotoList = ({data}) => {
-	const [postIndex, setPostIndex] = useState(0);
 	const [isVisible, setIsVisible] = useState(false);
+	const dispatch = useDispatch();
 
-	const onSetPostIndex = ( index ) => {
-		console.log(index);
-		setPostIndex(index);
+	const onSetPostIndex = ( id ) => {
+		dispatch( postsAction.getPost(id))
 		setIsVisible(true);
+		console.log("id:",id);
+	}
+
+	const onPutPost = (data, isLike) => {
+		let requestData = { ...data };
+		requestData.isLike = isLike;
+		console.log(requestData);
+		dispatch(postsAction.putPost(requestData));
 	}
 
 	return (
@@ -20,13 +29,13 @@ const PhotoList = ({data}) => {
 				<div>
 					<Search></Search>
 				</div>
-				<div className="frame">{ data.map((post, key) => {
-					return <PhotoItem key={key}
+				<div className="frame">{ data.map((post) => {
+					return <PhotoItem key={post.id}
 														image_url = {post.image_url}
-														onSetPostIndex={ () => {onSetPostIndex(key) }}/>
+														onSetPostIndex={ () => {onSetPostIndex(post.id) }}/>
 				}) }</div>
 			</div>
-			<Modal data={ data[postIndex] } isVisible={isVisible} closeModal={setIsVisible}/>
+			<Modal onPutPost={onPutPost} isVisible={isVisible} closeModal={setIsVisible}/>
 		</div>
 	);
 };

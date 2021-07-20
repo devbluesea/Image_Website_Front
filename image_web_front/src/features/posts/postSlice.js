@@ -3,6 +3,7 @@ import { reducerUtils } from '../../util/async.utill';
 
 const initialState = {
 	posts : reducerUtils.initial(),
+	post : reducerUtils.initial(),
 	keyword : null,
 	current_page : 1,
 }
@@ -16,6 +17,7 @@ const slice = createSlice({
 		setKeyword( state, {payload}) {
 			state.keyword = payload.data
 		},
+
 		getPosts( state ) {
 			state.posts = reducerUtils.loading()
 		},
@@ -25,6 +27,28 @@ const slice = createSlice({
 		getPostsError( state, { payload }) {
 			state.posts = reducerUtils.error(payload)
 		},
+
+		getPost( state ) {
+			state.post = reducerUtils.loading()
+		},
+		getPostSuccess( state, { payload } ) {
+			state.post = reducerUtils.success(payload.data)
+		},
+		getPostError( state, { payload }) {
+			state.post = reducerUtils.error(payload)
+		},
+
+
+		putPost( state ) {
+			state.post = reducerUtils.loading()
+		},
+		putPostSuccess( state, { payload } ) {
+			state.post = reducerUtils.success(payload.data)
+		},
+		putPostError( state, { payload }) {
+			state.post = reducerUtils.error(payload)
+		},
+
 		setCurrentPage( state, {payload}) {
 			state.current_page = payload
 		}

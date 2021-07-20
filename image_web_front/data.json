@@ -41,91 +41,167 @@
       "image_url": "http://localhost:3000/upload_img/img-1626457738825.jpeg",
       "comment": "예시이미지",
       "tag": "그린",
-      "id": 1
+      "id": 1,
+      "isLike": true,
+      "countLike": 0
     },
     {
       "image_url": "http://localhost:3000/upload_img/img-1626457738825.jpeg",
       "comment": "예시이미지2",
       "tag": "그린",
-      "id": 2
+      "id": 2,
+      "isLike": false,
+      "countLike": 0
     },
     {
       "image_url": "http://localhost:3000/upload_img/img-1626457768088.jpeg",
       "comment": "예시이미지3",
       "tag": "블루",
-      "id": 3
+      "id": 3,
+      "isLike": false,
+      "countLike": 0
     },
     {
       "image_url": "http://localhost:3000/upload_img/img-1626457785909.jpeg",
       "comment": "예시이미지4",
       "tag": "블루",
-      "id": 4
+      "id": 4,
+      "isLike": false,
+      "countLike": 0
     },
     {
       "image_url": "http://localhost:3000/upload_img/img-1626457800384.jpeg",
       "comment": "예시이미지5",
       "tag": "레드",
-      "id": 5
+      "id": 5,
+      "isLike": false,
+      "countLike": 0
     },
     {
       "image_url": "http://localhost:3000/upload_img/img-1626457823424.jpeg",
       "comment": "예시이미지5",
       "tag": "레드",
-      "id": 6
+      "id": 6,
+      "isLike": true,
+      "countLike": 0
     },
     {
       "image_url": "http://localhost:3000/upload_img/img-1626457836654.jpeg",
       "comment": "예시이미지5",
       "tag": "레드",
-      "id": 7
+      "id": 7,
+      "isLike": true,
+      "countLike": 0
     },
     {
       "image_url": "http://localhost:3000/upload_img/img-1626457854361.jpeg",
       "comment": "예시이미지8",
       "tag": "화이트",
-      "id": 8
+      "id": 8,
+      "isLike": false,
+      "countLike": 0
     },
     {
       "image_url": "http://localhost:3000/upload_img/img-1626457879178.jpeg",
       "comment": "예시이미지8",
       "tag": "베이지",
-      "id": 9
+      "id": 9,
+      "isLike": false,
+      "countLike": 0
     },
     {
       "image_url": "http://localhost:3000/upload_img/img-1626468889259.jpeg",
       "comment": "10번째 글",
       "tag": "베이지",
-      "id": 10
+      "id": 10,
+      "isLike": false,
+      "countLike": 0
     },
     {
       "image_url": "http://localhost:3000/upload_img/img-1626468911636.jpeg",
       "comment": "11번째 글",
       "tag": "옐로우",
-      "id": 11
+      "id": 11,
+      "isLike": false,
+      "countLike": 0
     },
     {
       "image_url": "http://localhost:3000/upload_img/img-1626468933306.jpeg",
       "comment": "12번째 글",
       "tag": "베이지",
-      "id": 12
+      "id": 12,
+      "isLike": true,
+      "countLike": 0
     },
     {
       "image_url": "http://localhost:3000/upload_img/img-1626468953368.jpeg",
       "comment": "13번째 글",
       "tag": "블랙",
-      "id": 13
+      "id": 13,
+      "isLike": false,
+      "countLike": 0
     },
     {
       "image_url": "http://localhost:3000/upload_img/img-1626468965036.jpeg",
       "comment": "14번째 글",
       "tag": "베이지",
-      "id": 14
+      "id": 14,
+      "isLike": false,
+      "countLike": 0
     },
     {
       "image_url": "http://localhost:3000/upload_img/img-1626468981921.jpeg",
       "comment": "15번째 글",
       "tag": "화이트",
-      "id": 15
+      "id": 15,
+      "isLike": false,
+      "countLike": 0
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1626473803701.jpeg",
+      "comment": "comment",
+      "tag": "그린",
+      "id": 16,
+      "isLike": false,
+      "countLike": 0
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1626473882975.jpeg",
+      "comment": "17번째 글",
+      "tag": "블랙",
+      "id": 17,
+      "isLike": false,
+      "countLike": 0
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1626473985650.jpeg",
+      "comment": "18번째 글",
+      "tag": "레드",
+      "id": 18,
+      "isLike": true,
+      "countLike": 0
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1626474007152.jpeg",
+      "comment": "19번째 글",
+      "tag": "블루",
+      "id": 19,
+      "isLike": true,
+      "countLike": 0
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "name": "test1@naver.com",
+      "content": "댓글0",
+      "postId": 10
+    },
+    {
+      "name": "test1@naver.com",
+      "content": "댓글3",
+      "postId": "10",
+      "id": 2
     }
   ]
 }
