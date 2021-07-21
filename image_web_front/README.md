@@ -2,8 +2,9 @@
 핀터레스트와 같이 이미지를 올리고 웹 사이트
 Back end 없이 Json-Server와 간단한 node.js 서버로 Front end를 중심적으로 제작
 이미지 태그 검색, 상세페이지 팝업, 페이지네이션, 로그인, 댓글, 좋아요 기능 구현    
-
-## Available Scripts
+<br>
+<br>
+### Available Scripts
 실행방법 Json Placeholder에서 제공하는 Json-Sever를 사용했으며 이미지를 public 폴더로 전송해주는 것은 node.js를 사용
 Json-server 
 node.js
