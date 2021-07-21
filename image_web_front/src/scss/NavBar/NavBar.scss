@@ -1,5 +1,7 @@
 .NavBar-Template {
 	background: gray;
+	display: flex;
+	justify-content: center;
 }
 
 @mixin align {
@@ -11,20 +13,22 @@
 .NavBar-Template .Wrapper {
 	display: flex;
 	height: 55px;
-	@include align()
+	width: 810px;
+	//background-color: brown;
+	@include align() {
+		justify-content: space-between;
+	}
 }
 
 .NavBar-Template .Wrapper .Logo {
-	background: plum;
+	//background: plum;
 	width: 65px;
 	cursor: pointer;
 }
 
-.NavBar-Template .Wrapper .MyPage {
-	background: purple;
-}
-
-.NavBar-Template .Wrapper .Sign {
-	background: seagreen;
+.NavBar-Template .Wrapper .Menu {
+	//background: purple;
+	width: 150px;
+	display: flex;
 }
 

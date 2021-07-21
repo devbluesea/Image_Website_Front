@@ -4,9 +4,9 @@ import '../../scss/NavBar/SignInUp.scss';
 
 const SignInUp = () => {
 	return (
-		<div>
-			<Link to="/login"><span>로그인</span></Link>
-			<Link to="/signup"><span>회원가입</span></Link>
+		<div className="SignInUp-template">
+			<Link className="link" to="/login"><span className="login">로그인</span></Link>
+			<Link className="link" to="/signup"><span className="signup">회원가입</span></Link>
 		</div>
 	);
 };

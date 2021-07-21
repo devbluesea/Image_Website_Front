@@ -11,7 +11,7 @@ const NavBar = () => {
 				<Link to="/">
 					<img className = "Logo" src={logo} alt = "logo"></img>
 				</Link>
-				<div><NavInner/></div>
+				<div className="Menu"><NavInner/></div>
 			</div>
 		</div>
 	);

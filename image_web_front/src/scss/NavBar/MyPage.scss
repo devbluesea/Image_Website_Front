@@ -1,3 +1,11 @@
-.MyPage-template[data-login = ""] {
-	background: chartreuse;
+.MyPage-template {
+	//background: chartreuse;
+	width: 130px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.MyPage-template .link {
+	text-decoration: none;
+	color: black;
 }

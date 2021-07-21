@@ -1,0 +1,87 @@
+.signup-template {
+	--shadow-color: #00000029;
+	--input-color: rgb(243, 243, 243);
+	//background-color: cadetblue;
+	width: 380px;
+	height: 470px;
+	margin: 120px auto;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 3px 3px 10px 0 var(--shadow-color);
+}
+
+@mixin inputform {
+	display: block;
+	border: none;
+	border-radius: 5px;
+	background: var(--input-color);
+	width: 200px;
+	height: 25px;
+	@content
+};
+
+.signup-template .header {
+	font-size: 21px;
+	padding-bottom: 35px;
+	color: rgb(83, 83, 83);
+}
+
+.signup-template .wrapper {
+	margin-top: 20px;
+}
+
+.signup-template .wrapper .email .email-input{
+	@include inputform()
+}
+
+.signup-template .wrapper .name .name-input {
+	@include inputform() {
+		margin-top: 10px;
+	}
+}
+
+.signup-template .wrapper .nickname .nickname-input {
+	@include inputform() {
+		margin-top: 10px;
+	}
+}
+
+.signup-template .wrapper .password .password-input {
+	@include inputform() {
+		margin-top: 10px;
+	}
+}
+
+.signup-template .wrapper .password-check .password-check-input {
+	@include inputform() {
+		margin-top: 10px;
+	}
+}
+
+.signup-template .wrapper .submit .submit-btn {
+	@include inputform();
+	color: rgb(99, 99, 99);
+	background: rgb(228, 228, 228);
+	margin-top: 15px;
+	width: 203px;
+	height: 31px;
+	cursor: pointer;
+}
+
+.signup-template .wrapper .to-login {
+	width: 150px;
+	margin: 0 auto;
+	padding: 30px 0 0 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.signup-template .wrapper .to-login .signage {
+	font-size: 12px;
+}
+
+.signup-template .wrapper .to-login .link {
+	font-size: 12px;
+}
