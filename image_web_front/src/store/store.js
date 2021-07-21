@@ -6,10 +6,13 @@ import { postsReducer, POSTS} from '../features/posts/postSlice';
 import { postsSaga } from '../features/posts/postSaga'
 import { usersReducer, USERS } from "../features/users/usersSlice";
 import { usersSaga } from "../features/users/usersSaga";
+import { commentsReducer, COMMENTS } from "../features/comments/commentsSlice";
+import { commentsSaga } from "../features/comments/commentsSaga";
 
 export const rootReducer = combineReducers ({
 	[POSTS] : postsReducer,
-	[USERS] : usersReducer
+	[USERS] : usersReducer,
+	[COMMENTS] : commentsReducer
 });
 
 const sagaMiddleware = createSagaMiddleware();
@@ -17,7 +20,8 @@ const sagaMiddleware = createSagaMiddleware();
 function* rootSaga() {
 	yield all([
 		call(postsSaga),
-		call(usersSaga)
+		call(usersSaga),
+		call(commentsSaga)
 	])
 }
 

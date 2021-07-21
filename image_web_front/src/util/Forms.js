@@ -23,3 +23,11 @@ export const PostForm = {
 export const SearchForm = {
 	tag: ""
 }
+
+export const CommentForm = {
+	postId: "",
+	postData:{
+		content: "",
+		name: ""
+	}
+}

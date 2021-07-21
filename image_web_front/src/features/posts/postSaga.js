@@ -1,4 +1,4 @@
-import { call, takeLatest, put, all, fork } from "redux-saga/effects";
+import { call, takeLatest, put, all, fork, select } from "redux-saga/effects";
 import { postsAction } from './postSlice';
 import * as postsApi from '../../api/posts';
 
@@ -35,6 +35,13 @@ function* putPost( action ) {
 	}
 }
 
+function* updatePost() {
+	const post = yield select((state) => {
+		return state.posts.post;
+	})
+	yield put(postsAction.getPost(post.data.id))
+}
+
 function* watchGetPosts() {
 	yield takeLatest( postsAction.getPosts, getPosts );
 }
@@ -51,11 +58,16 @@ function* watchPutPost() {
 	yield takeLatest( postsAction.putPost, putPost);
 }
 
+function* watchPutPostSuccess() {
+	yield takeLatest( postsAction.putPostSuccess, updatePost);
+}
+
 export function* postsSaga() {
 	yield all([
 		fork(watchGetPosts),
 		fork(watchPutPost),
 		fork(watchSetKeyword),
-		fork(watchGetPost)
+		fork(watchGetPost),
+		fork(watchPutPostSuccess)
 	])
 }
