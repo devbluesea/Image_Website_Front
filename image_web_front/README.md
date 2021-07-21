@@ -8,7 +8,8 @@ Back end 없이 Json-Server와 간단한 node.js 서버로 Front end를 중심�
 실행방법 Json Placeholder에서 제공하는 Json-Sever를 사용했으며 이미지를 public 폴더로 전송해주는 것은 node.js를 사용<br>
 Json-server <br>
 node.js <br>
-react 구동이 필요하다.<br>
+react<br>
+구동이 필요하다.<br>
 
 제일 먼저
 ```bash
