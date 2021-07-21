@@ -15,6 +15,8 @@ react 구동이 필요하다.
 npm install
 ```
 Package.json을 가지고 node modules를 설치해준다.
+<br>
+<br>
 
 ### Json-Sever 실행
 ```bash
@@ -31,6 +33,8 @@ localhost:7000 으로 node.js 서버가 구동이 되면 성공
  yarn start
 ```
 프론트 페이지가 정상적으로 로딩이 되면 구동 완료
+<br>
+<br>
 
 ### 로그인
 ID : test1@naver.com
