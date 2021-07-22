@@ -1,10 +1,15 @@
 import React from 'react';
 import '../../scss/Posts/PhotoItem.scss';
 
-const PhotoItem = ({ image_url , onSetPostIndex }) => {
+const PhotoItem = ({ post , onSetPostIndex }) => {
 	return (
 		<div className="PhotoItem-template" onClick={onSetPostIndex}>
-			<img className="Picture" src={image_url} alt="img"/>
+			<div>
+				<img className="Picture" src={post.image_url} alt="img"/>
+			</div>
+			<div>
+			</div>
+			{console.log(post)}
 		</div>
 	);
 };

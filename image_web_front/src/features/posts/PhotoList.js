@@ -30,14 +30,10 @@ const PhotoList = ({data}) => {
 					<Search></Search>
 				</div>
 				<div className="frame">{ data.map((post) => {
-					return <PhotoItem key={post.id}
-														image_url = {post.image_url}
-														onSetPostIndex={ () => {onSetPostIndex(post.id) }}/>
-				}) }</div>
+					return <PhotoItem key={post.id} post = {post} onSetPostIndex={ () => {onSetPostIndex(post.id) }}/>}) }
+				</div>
+				<Modal onPutPost={onPutPost} isVisible={isVisible} closeModal={setIsVisible}/>
 			</div>
-			<Modal onPutPost={onPutPost}
-						 isVisible={isVisible}
-						 closeModal={setIsVisible}/>
 		</div>
 	);
 };

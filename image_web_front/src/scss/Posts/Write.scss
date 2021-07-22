@@ -1,0 +1,49 @@
+.Write-template {
+	--shadow-color: #00000029;
+
+	width: 400px;
+	height: 600px;
+	margin: 120px auto;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 3px 3px 10px 0 var(--shadow-color);
+	//background: cornflowerblue;
+	position: relative;
+}
+
+.Write-template .wrapper .image .screen {
+	background-color: cyan;
+	position: absolute;
+	left: 35px;
+	top: 35px;
+	width: 330px;
+	height: 330px;
+}
+
+.Write-template .wrapper .image .screen .picture {
+	width: 330px;
+	height: 330px;
+}
+
+.Write-template .wrapper .input {
+	width: 350px;
+	position: absolute;
+	top: 385px;
+	left: 30px;
+}
+
+.texts {
+	position: absolute;
+	top: 400px;
+}
+
+.submit-btn {
+	position: absolute;
+	top: 500px;
+}
+
+.imgsubmit-btn {
+
+}

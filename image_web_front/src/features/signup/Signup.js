@@ -43,7 +43,9 @@ const SignUp = () => {
 						<input className="password-check-input" placeholder="  비밀번호 확인"/>
 					</div>
 					<div className="submit">
-						<button className="submit-btn">회원가입</button>
+						<Link className="link" to="/login">
+							<button className="submit-btn">회원가입</button>
+						</Link>
 					</div>
 					<div className="to-login">
 						<span className="signage">아이디가 있으세요?</span>

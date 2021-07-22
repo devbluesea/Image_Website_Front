@@ -33,7 +33,7 @@ const Login = () => {
 					<input className="password-input" type="password" placeholder="  비밀번호" name="password" value={loginForm.password} onChange={handleChangeForm}/>
 				</div>
 				<div className="submit">
-					<button className="login-btn" onClick={() => {handleLoginBtnClick(loginForm)}}>로그인</button>
+					<Link to="/"><button className="login-btn" onClick={() => {handleLoginBtnClick(loginForm)}}>로그인</button></Link>
 				</div>
 				<div className="to-signup">
 					<span className="signage">계정이 없으신가요?</span>

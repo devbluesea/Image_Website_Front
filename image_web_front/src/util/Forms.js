@@ -17,7 +17,10 @@ export const UploadForm = {
 export const PostForm = {
 	image_url: "",
 	comment: "",
-	tag:""
+	tag:"",
+	isLike: false,
+	countLike: 0,
+	writer: {}
 }
 
 export const SearchForm = {
