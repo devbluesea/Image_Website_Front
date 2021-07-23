@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { postsAction } from './postSlice';
 import { useDispatch, useSelector } from 'react-redux'
 import { SearchForm } from '../../util/Forms';
+import '../../scss/Posts/Search.scss'
 
 const Search = () => {
 
@@ -22,9 +23,9 @@ const Search = () => {
 	}
 
 	return (
-		<div>
-			<input type="text" name="tag" placeholder="검색어를 입력하세요" onChange={handleChangeSearchForm} value={keyword}></input>
-			<button onClick={() => {handleSearchClick(searchForm)}}>검색</button>
+		<div className="Search-template">
+			<input className="input" type="text" name="tag" placeholder="       이미지 태그 검색" onChange={handleChangeSearchForm} value={keyword}></input>
+			<button className="btn" onClick={() => {handleSearchClick(searchForm)}}>검색</button>
 		</div>
 	);
 };

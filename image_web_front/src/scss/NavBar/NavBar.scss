@@ -1,5 +1,8 @@
 .NavBar-Template {
-	background: gray;
+	--shadow-color: #00000029;
+	//background: gray;
+	border-bottom: 1px;
+	box-shadow: 1px 1px 5px 0 var(--shadow-color);
 	display: flex;
 	justify-content: center;
 }
@@ -12,7 +15,7 @@
 
 .NavBar-Template .Wrapper {
 	display: flex;
-	height: 55px;
+	height: 60px;
 	width: 810px;
 	//background-color: brown;
 	@include align() {
@@ -21,7 +24,7 @@
 }
 
 .NavBar-Template .Wrapper .Logo {
-	background: plum;
+	//background: plum;
 	width: 65px;
 	cursor: pointer;
 }

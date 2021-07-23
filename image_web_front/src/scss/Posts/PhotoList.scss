@@ -4,7 +4,7 @@
 
 	width: var(--photoList-width);
 	height: var(--photoList-height);
-	background:tan;
+	//background:tan;
 	margin: 0 auto;
 }
 
@@ -13,18 +13,18 @@
 
 .PhotoList-template .wrapper .search {
 	display: flex;
-	margin: 30px 0 0;
+	margin: 50px 0 0;
 	justify-content: center;
-	background: chartreuse;
+	//background: chartreuse;
 }
 
 .PhotoList-template .wrapper .frame {
 	display: flex;
 	flex-wrap: wrap;
 	//overflow: visible;
-	background: teal;
+	//background: teal;
 	justify-content: space-between;
-	margin: 30px 0 0;
+	margin: 20px 0 0;
 	padding: 0 10px 0;
 }
 
