@@ -37,32 +37,52 @@ const Modal = ({ onPutPost, isVisible, closeModal }) => {
 		return (
 			<div className="modal-template" data-visible={isVisible}>
 				<div className="wrapper">
-					<div className="modal-head">
+					<div className="modal-header">
 						{ data.isLike && <span> 좋아! </span>}
 						<span onClick = {() => {onPutPost(data, !data.isLike)}}>좋아요</span>
 						<span onClick={() => {closeModal(false)}}>닫기</span>
 					</div>
 					<div className="modal-body">
-						<img src={data.image_url} alt="image_url"></img>
-						<div>{data.comment}</div>
+						<img src={data.image_url} className="image" alt="image_url"></img>
+						<div className="comment">
+							<div className="subject">
+								<span>Comment</span>
+								<span>|</span>
+							</div>
+							<div className="sentence">{data.comment}</div>
+						</div>
 					</div>
 					<div className="modal-footer">
-						<div className="">
-							{ commentsData && commentsData.map((comment) => {
-								return (
-									<div key={comment.id}>
-										<span>{comment.content}</span>
-										<span>{comment.name}</span>
-									</div>);
-								})}
+						<div className="writer">
+							<div className="profile-img">PROFILE IMG</div>
+							<div className="profile-info">
+								<div>{data.writer.nickname}</div>
+								<div>{data.writer.email}</div>
+							</div>
 						</div>
 						<div>
-							{ loginInfo.isLogin &&
-								<div>
-									<input placeholder="댓글" name="content" value={commentInputForm.content} onChange={handleChangeForm} />
-									<button onClick={onClick}>입력</button>
-								</div>
-							}
+							<div className="reply">
+								{ commentsData && commentsData.map((comment) => {
+									return (
+										<div className="reples">
+											<div className="text" key={comment.id}>
+												<span>{comment.name}</span>
+												<span>:</span>
+											</div>
+											<div className="content">
+												<div>{comment.content}</div>
+											</div>
+										</div>);
+									})}
+							</div>
+							<div className="reply-write">
+								{ loginInfo.isLogin &&
+									<div>
+										<input className="input" placeholder="    댓글" name="content" value={commentInputForm.content} onChange={handleChangeForm} />
+										<button className="btn" onClick={onClick}>입력</button>
+									</div>
+								}
+							</div>
 						</div>
 					</div>
 				</div>
