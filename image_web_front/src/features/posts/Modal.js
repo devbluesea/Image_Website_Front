@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { CommentForm } from '../../util/Forms';
 import { commentsAction } from '../comments/commentsSlice';
 import '../../scss/Posts/Modal.scss';
+import likeStar from '../../images/star.png';
+import likeStarYellow from '../../images/star_yellow.png';
 
 const Modal = ({ onPutPost, isVisible, closeModal }) => {
 	const {data, loading, error} = useSelector( (state) => state.posts.post)
@@ -38,9 +40,17 @@ const Modal = ({ onPutPost, isVisible, closeModal }) => {
 			<div className="modal-template" data-visible={isVisible}>
 				<div className="wrapper">
 					<div className="modal-header">
-						{ data.isLike && <span> 좋아! </span>}
-						<span onClick = {() => {onPutPost(data, !data.isLike)}}>좋아요</span>
-						<span onClick={() => {closeModal(false)}}>닫기</span>
+						<div className="like">
+							<div className="star-like" onClick = {() => {onPutPost(data, !data.isLike)}}>
+								{ data.isLike && <img className="icon" src={likeStarYellow} alt="좋아"/>}
+							</div>
+							<div className="star" onClick = {() => {onPutPost(data, !data.isLike)}}>
+								{ !data.isLike && <img className="icon" src={likeStar} alt="좋아요"/> }
+							</div>
+						</div>
+						<div className="close">
+							<span onClick={() => {closeModal(false)}}>닫기</span>
+						</div>
 					</div>
 					<div className="modal-body">
 						<img src={data.image_url} className="image" alt="image_url"></img>

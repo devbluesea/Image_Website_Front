@@ -26,12 +26,42 @@
 	display: flex;
 }
 
-.modal-template .modal-header {
-	//background: tomato;
+.modal-template .modal-header .close {
+	width: 35px;
+	height: 25px;
 	display: flex;
-	height: 20px;
-	justify-content: space-between;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	background: rgb(214, 214, 214);
+}
+
+.modal-template .modal-header .like {
 	position: absolute;
+	left: 60px;
+	top: 60px;
+	z-index: 1;
+}
+
+.modal-template .modal-header .like {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background: rgba($color: #ffffff, $alpha: 0.7);
+}
+
+.modal-template .modal-header .like .icon {
+	width: 30px;
+	height: 30px;
+}
+
+.modal-template .modal-header .close {
+	position: absolute;
+	right: 0px;
+	top: -40px;
 }
 
 .modal-template .modal-body .image {
