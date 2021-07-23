@@ -24,15 +24,17 @@ const PhotoList = ({data}) => {
 	}
 
 	return (
-		<div className="photoList-template">
+		<div className="PhotoList-template">
 			<div className="wrapper">
-				<div>
+				<div className="search">
 					<Search></Search>
 				</div>
 				<div className="frame">{ data.map((post) => {
 					return <PhotoItem key={post.id} post = {post} onSetPostIndex={ () => {onSetPostIndex(post.id) }}/>}) }
 				</div>
-				<Modal onPutPost={onPutPost} isVisible={isVisible} closeModal={setIsVisible}/>
+				<div className="modal">
+					<Modal onPutPost={onPutPost} isVisible={isVisible} closeModal={setIsVisible}/>
+				</div>
 			</div>
 		</div>
 	);

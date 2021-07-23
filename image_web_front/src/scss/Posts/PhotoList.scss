@@ -1,57 +1,36 @@
-.photoList-template {
-	--photoList-width: 950px;
-	--photoList-height: 1500px;
-}
+.PhotoList-template {
+	--photoList-width: 810px;
+	--photoList-height: 1300px;
 
-.photoList-template .wrapper {
-	background: aquamarine;
-	padding: 20px 0 0 0;
-}
-
-.photoList-template .wrapper .frame {
-	display: flex;
-	margin: 0 auto 0 auto;
 	width: var(--photoList-width);
-	justify-content: space-around;
-	flex-wrap: wrap;
-	overflow: visible;
-	background: blue;
+	height: var(--photoList-height);
+	background:tan;
+	margin: 0 auto;
 }
 
+.PhotoList-template .wrapper {
+}
 
-//.CardViewList-wrapper {
-//	display: flex;
-//	justify-content: space-around;
-//	flex-wrap: wrap;
-//	overflow: visible;
-//}
+.PhotoList-template .wrapper .search {
+	display: flex;
+	margin: 30px 0 0;
+	justify-content: center;
+	background: chartreuse;
+}
 
-//.CardViewListItem-wrapper {
-//	--shadow-color: #00000029;
-//	--cardview-width: 250px;
-//	--cardview-height: 411px;
-//	--cardview-photo-height: (var(--cardview-height) - 130)px;
+.PhotoList-template .wrapper .frame {
+	display: flex;
+	flex-wrap: wrap;
+	//overflow: visible;
+	background: teal;
+	justify-content: space-between;
+	margin: 30px 0 0;
+	padding: 0 10px 0;
+}
 
-//	box-shadow: 3px 3px 10px 0 var(--shadow-color);
-//	width: var(--cardview-width);
-//	height: var(--cardview-height);
-//	border-radius: 20px;
-//	position: relative;
-//	margin-top: 20px;
-//	&:hover {
-//		background: #ececec;
-//		transition: 0.5s;
-//		.CardViewListItem-img {
-//			filter: brightness(80%);
-//			transition: 0.5s;
-//		}
-//	}
-
-//	.CardViewListItem-thumbnail {
-//		position: relative;
-
-//		.CardViewListItem-img {
-//			width: var(--cardview-width);
-//			height: 277px;
-//			border-radius: 20px 20px 0 0;
-//		}
+.PhotoList-template .wrapper .modal {
+	display: flex;
+	margin: 30px 0 0;
+	justify-content: center;
+	background:cornflowerblue;
+}

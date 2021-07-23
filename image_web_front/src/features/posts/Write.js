@@ -64,15 +64,22 @@ const Write = () => {
 					</div>
 					<div className="input">
 						<div><input type="file" name="imageUpload" onChange={onFileChange}/></div>
-						<div><button className="imgsubmit-btn" onClick={() => {handleChangeForm(upLoadFileForm)}}>업로드</button></div>
+						<button className="imgsubmit" onClick={() => {handleChangeForm(upLoadFileForm)}}>업로드</button>
 					</div>
 				</div>
 				<div className="texts">
-					<div><textarea name="comment" value={postForm.comment} onChange={handleCommentChange}/></div>
-					<div><textarea name="tag" value={postForm.tag} onChange={handleCommentChange}/></div>
+					<div className="comment">
+						<span >Comment</span>
+						<span className="txtarea"><textarea name="comment" value={postForm.comment} onChange={handleCommentChange}/></span>
+					</div>
+					<div className="tag">
+						<span>Image Tag</span>
+						<span className="txtarea"><textarea name="tag" value={postForm.tag} onChange={handleCommentChange}/></span>
+					</div>
 				</div>
-				<button className="submit-btn" onClick={() => {handleWriteSubmit()}}>글쓰기</button>
-			{console.log(postForm)}
+				<div className="submit">
+					 <button className="submit-btn" onClick={() => {handleWriteSubmit()}}>글쓰기</button>
+				</div>
 			</div>
 		</div>
 	);

@@ -5,6 +5,7 @@ import Posts from './features/posts/Posts';
 import Signup from './features/signup/Signup';
 import Login from './features/login/Login';
 import Write from './features/posts/Write';
+import MyPageList from './components/NavBar/MyPageList';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 			<Route path="/signup" component={Signup} />
 			<Route path="/login" component={Login} />
 			<Route path="/write" component={Write} />
+			<Route path="/mypage" component={MyPageList}/>
     </div>
   );
 }

@@ -1,10 +1,32 @@
 .PhotoItem-template {
 	//display: flex;
+	--shadow-color: #00000029;
+	--cardview-width: 250px;
+	--cardview-height: 370px;
+
+	width: var(--cardview-width);
+	height: var(--cardview-height);
+	box-shadow: 3px 3px 10px 0 var(--shadow-color);
+	//width: var(--cardview-width);
+	//height: var(--cardview-height);
+	border-radius: 20px;
+	position: relative;
+	cursor: pointer;
+	margin: 20px 0 0;
+	&:hover {
+		background: #ececec;
+		transition: 0.5s;
+		filter: brightness(80%);
+	}
 }
 
-.PhotoItem-template .Picture {
-	width: 1;
+.PhotoItem-template .wrapper {
+
+}
+
+.PhotoItem-template .wrapper .screen .picture {
+	width: var(--cardview-width);
+	height: var(--cardview-height);
+	border-radius: 20px;
 	cursor: pointer;
-	&:hover {
-	}
 }

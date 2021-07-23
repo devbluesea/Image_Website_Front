@@ -106,7 +106,7 @@
       "image_url": "http://localhost:3000/upload_img/img-1626937005733.jpeg",
       "comment": "콘크리트 건물과 의자 식물",
       "tag": "그레이",
-      "isLike": false,
+      "isLike": true,
       "countLike": 0,
       "writer": {
         "id": 1,
@@ -118,9 +118,9 @@
       "id": 3
     },
     {
-      "image_url": "http://localhost:3000/upload_img/img-1626963355070.jpeg",
-      "comment": "aa",
-      "tag": "aaa",
+      "image_url": "http://localhost:3000/upload_img/img-1627036939322.jpeg",
+      "comment": "초록색 벽과 건물과 그림자 하늘 사진",
+      "tag": "그린",
       "isLike": false,
       "countLike": 0,
       "writer": {
@@ -131,7 +131,134 @@
         "password": "1234"
       },
       "id": 4
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1627039414912.jpeg",
+      "comment": "파란색 풀장과 하얀색 동굴 하얀색 쿠션과 바다 산 풍경 사진",
+      "tag": "블루",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "id": 2,
+        "email": "test2@naver.com",
+        "name": "테스트유저2",
+        "nickname": "하이",
+        "password": "5678"
+      },
+      "id": 5
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1627039506064.jpeg",
+      "comment": "하얀색 건물과 풀장 그리고 그레이 계열의 가구들 햇살을 받은 문 사진",
+      "tag": "화이트",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "id": 2,
+        "email": "test2@naver.com",
+        "name": "테스트유저2",
+        "nickname": "하이",
+        "password": "5678"
+      },
+      "id": 6
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1627042640732.jpeg",
+      "comment": "창문으로 들어오는 빛 방 안에 그림자와 대비",
+      "tag": "그레이",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "id": 2,
+        "email": "test2@naver.com",
+        "name": "테스트유저2",
+        "nickname": "하이",
+        "password": "5678"
+      },
+      "id": 7
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1627042666418.jpeg",
+      "comment": "노을지는 해변가 잔잔한 바다",
+      "tag": "레드",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "id": 2,
+        "email": "test2@naver.com",
+        "name": "테스트유저2",
+        "nickname": "하이",
+        "password": "5678"
+      },
+      "id": 8
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1627042762214.jpeg",
+      "comment": "해변가 백사장 화이트 의자와 튜브 그리고 표지판",
+      "tag": "화이트",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "email": "br1992ay@gmail.com",
+        "name": "백승우",
+        "nickname": "팅우",
+        "password": "111",
+        "id": 11
+      },
+      "id": 9
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1627042810434.jpeg",
+      "comment": "바람부는 창문과 흩날리는 커튼",
+      "tag": "화이트",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "email": "br1992ay@gmail.com",
+        "name": "백승우",
+        "nickname": "팅우",
+        "password": "111",
+        "id": 11
+      },
+      "id": 10
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1627043212012.jpeg",
+      "comment": "해변가에 검은색 흰색 패턴의 파라솔과 베드",
+      "tag": "블랙",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "email": "br1992ay@gmail.com",
+        "name": "백승우",
+        "nickname": "팅우",
+        "password": "111",
+        "id": 11
+      },
+      "id": 11
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1627043273012.jpeg",
+      "comment": "자전거와 오렌지 파스텔 색상의 벽과 바다",
+      "tag": "오렌지",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "email": "br1992ay@gmail.com",
+        "name": "백승우",
+        "nickname": "팅우",
+        "password": "111",
+        "id": 11
+      },
+      "id": 12
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "name": "팅우",
+      "content": "사진 잘 봤어요",
+      "postId": "9",
+      "id": 1
+    }
+  ]
 }

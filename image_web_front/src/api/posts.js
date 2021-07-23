@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const get_port = 8000;
 const URL = "localhost";
+const get_port = 8000;
 const get_Route = "posts";
 
 export const getPosts = ( data = null ) => {

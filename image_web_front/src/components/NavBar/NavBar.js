@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import '../../scss/NavBar/NavBar.scss';
 import logo from '../../logo.svg';
 import NavInner from './NavInner';
+import { useSelector } from 'react-redux';
 
 const NavBar = () => {
+	const loginInfo = useSelector( (state) => state.users)
+
 	return (
 		<div className = "NavBar-Template">
 			<div className = "Wrapper">

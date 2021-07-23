@@ -1,25 +1,31 @@
 .Write-template {
 	--shadow-color: #00000029;
 
-	width: 400px;
-	height: 600px;
+	width: 800px;
+	height: 500px;
 	margin: 120px auto;
 	border-radius: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	box-shadow: 3px 3px 10px 0 var(--shadow-color);
-	//background: cornflowerblue;
+	font-size: 12px;
 	position: relative;
 }
 
+.Write-template .wrapper {
+	display: flex;
+}
+
 .Write-template .wrapper .image .screen {
-	background-color: cyan;
-	position: absolute;
-	left: 35px;
-	top: 35px;
 	width: 330px;
 	height: 330px;
+	position: absolute;
+	border: 1px solid;
+	border-color: rgb(233, 233, 233);
+	left: 35px;
+	top: 35px;
+
 }
 
 .Write-template .wrapper .image .screen .picture {
@@ -34,16 +40,85 @@
 	left: 30px;
 }
 
-.texts {
-	position: absolute;
-	top: 400px;
+.Write-template .wrapper .input .imgsubmit {
+	width: 45px;
+	height: 45px;
+	background-color: rgb(235, 235, 235);
+	font-size: 12px;
+	border: none;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px auto 0 auto;
+	color: rgb(59, 59, 59);
+	cursor: pointer;
 }
 
-.submit-btn {
+.Write-template .wrapper .texts {
+	width: 330px;
 	position: absolute;
-	top: 500px;
+	top: 35px;
+	left: 435px;
 }
 
-.imgsubmit-btn {
+.Write-template .wrapper .texts .comment {
+	display: flex;
+	justify-content: space-between;
+	:nth-child(1) {
+		font-weight: 600;
+	}
+}
 
+.Write-template .wrapper .texts .comment .txtarea {
+
+	:nth-child(1) {
+		resize: none;
+		width: 250px;
+		height: 245px;
+		background: rgb(245, 245, 245);
+		font-weight: 500;
+		border: none;
+	}
+}
+
+.Write-template .wrapper .texts .tag {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+
+	:nth-child(1) {
+		font-weight: 600;
+	}
+}
+
+.Write-template .wrapper .texts .tag .txtarea {
+	:nth-child(1) {
+		resize: none;
+		width: 250px;
+		height: 70px;
+		font-weight: 500;
+		background: rgb(245, 245, 245);
+		border: none;
+	}
+}
+
+.Write-template .wrapper .submit {
+	position: absolute;
+	bottom: 35px;
+	left: 510px;
+}
+
+.Write-template .wrapper .submit-btn {
+	width: 255px;
+	height: 45px;
+	background-color: rgb(214, 214, 214);
+	font-size: 12px;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px auto 0 auto;
+	color: rgb(59, 59, 59);
+	cursor: pointer;
 }

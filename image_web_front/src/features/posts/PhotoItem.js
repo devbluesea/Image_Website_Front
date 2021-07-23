@@ -4,12 +4,15 @@ import '../../scss/Posts/PhotoItem.scss';
 const PhotoItem = ({ post , onSetPostIndex }) => {
 	return (
 		<div className="PhotoItem-template" onClick={onSetPostIndex}>
-			<div>
-				<img className="Picture" src={post.image_url} alt="img"/>
+			<div className="wrapper">
+				<div className="screen">
+					<img className="picture" src={post.image_url} alt="img"/>
+				</div>
+				{/*<div>
+					<span>{post.comment}</span>
+					<span>{post.countLike}</span>
+				</div>*/}
 			</div>
-			<div>
-			</div>
-			{console.log(post)}
 		</div>
 	);
 };
