@@ -1,5 +1,5 @@
 import { call, takeLatest, put, all, fork } from "@redux-saga/core/effects";
-import { commentsAction, commentsReducer } from "./commentsSlice";
+import { commentsAction } from "./commentsSlice";
 import * as commentsApi from '../../api/comments';
 import { select } from "redux-saga/effects";
 

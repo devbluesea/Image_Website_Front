@@ -211,7 +211,7 @@
       "image_url": "http://localhost:3000/upload_img/img-1627042810434.jpeg",
       "comment": "바람부는 창문과 흩날리는 커튼",
       "tag": "화이트",
-      "isLike": false,
+      "isLike": true,
       "countLike": 0,
       "writer": {
         "email": "br1992ay@gmail.com",
@@ -251,6 +251,36 @@
         "id": 11
       },
       "id": 12
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1627130451152.jpeg",
+      "comment": "야자수와 바다 캘리포니아 풍경 사진",
+      "tag": "블루",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "id": 1,
+        "email": "test1@naver.com",
+        "name": "테스트유저1",
+        "nickname": "헬로",
+        "password": "1234"
+      },
+      "id": 14
+    },
+    {
+      "image_url": "http://localhost:3000/upload_img/img-1627164794770.jpeg",
+      "comment": "창문으로 들어오는 빛 사진",
+      "tag": "베이지",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "email": "br1992ay@gmail.com",
+        "name": "백승우",
+        "nickname": "팅우",
+        "password": "111",
+        "id": 11
+      },
+      "id": 15
     }
   ],
   "comments": [
@@ -271,6 +301,24 @@
       "content": "댓글 달았어요!!",
       "postId": "9",
       "id": 3
+    },
+    {
+      "name": "팅우",
+      "content": "리액트 프로젝트",
+      "postId": "8",
+      "id": 4
+    },
+    {
+      "name": "팅우",
+      "content": "리액트 프로젝트",
+      "postId": "14",
+      "id": 5
+    },
+    {
+      "name": "팅우",
+      "content": "댓글 테스트",
+      "postId": "14",
+      "id": 6
     }
   ]
 }

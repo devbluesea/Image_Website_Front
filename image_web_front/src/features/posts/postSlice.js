@@ -6,7 +6,8 @@ const initialState = {
 	post : reducerUtils.initial(),
 	keyword : null,
 	current_page : 1,
-}
+	List : []
+};
 
 const name = "posts";
 
@@ -23,6 +24,7 @@ const slice = createSlice({
 		},
 		getPostsSuccess( state, { payload } ) {
 			state.posts = reducerUtils.success(payload.data)
+			state.List = [...state.List , ...payload.data]
 		},
 		getPostsError( state, { payload }) {
 			state.posts = reducerUtils.error(payload)
@@ -32,7 +34,7 @@ const slice = createSlice({
 			state.post = reducerUtils.loading()
 		},
 		getPostSuccess( state, { payload } ) {
-			state.post = reducerUtils.success(payload.data)
+			state.post = reducerUtils.success(payload.data);
 		},
 		getPostError( state, { payload }) {
 			state.post = reducerUtils.error(payload)

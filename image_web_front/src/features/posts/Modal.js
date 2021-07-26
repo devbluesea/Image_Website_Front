@@ -7,7 +7,7 @@ import likeStar from '../../images/star.png';
 import likeStarYellow from '../../images/star_yellow.png';
 
 const Modal = ({ onPutPost, isVisible, closeModal }) => {
-	const {data, loading, error} = useSelector( (state) => state.posts.post)
+	const {getPostsList, loading, error} = useSelector( (state) => state.posts.post)
 	const loginInfo = useSelector( (state) => state.users );
 	const commentsData = useSelector( (state) => state.comments.comments.data)
 	const [commentInputForm, setCommentInputForm] = useState(CommentForm)
@@ -16,7 +16,7 @@ const Modal = ({ onPutPost, isVisible, closeModal }) => {
 	const handleChangeForm = (e) => {
 		setCommentInputForm({
 			...commentInputForm,
-			postId: data.id,
+			postId: getPostsList.id,
 			postData: {
 				name: loginInfo.users.data[0].nickname,
 				content: e.target.value
@@ -33,19 +33,19 @@ const Modal = ({ onPutPost, isVisible, closeModal }) => {
 
 	if (loading) return <div>Loading..</div>
 	if (error) return <div>Error..</div>
-	if (!data) return null
+	if (!getPostsList) return null
 
-	if (data != null) {
+	if (getPostsList != null) {
 		return (
 			<div className="modal-template" data-visible={isVisible}>
 				<div className="wrapper">
 					<div className="modal-header">
 						<div className="like">
-							<div className="star-like" onClick = {() => {onPutPost(data, !data.isLike)}}>
-								{ data.isLike && <img className="icon" src={likeStarYellow} alt="좋아"/>}
+							<div className="star-like" onClick = {() => {onPutPost(getPostsList, !getPostsList.isLike)}}>
+								{ getPostsList.isLike && <img className="icon" src={likeStarYellow} alt="좋아"/>}
 							</div>
-							<div className="star" onClick = {() => {onPutPost(data, !data.isLike)}}>
-								{ !data.isLike && <img className="icon" src={likeStar} alt="좋아요"/> }
+							<div className="star" onClick = {() => {onPutPost(getPostsList, !getPostsList.isLike)}}>
+								{ !getPostsList.isLike && <img className="icon" src={likeStar} alt="좋아요"/> }
 							</div>
 						</div>
 						<div className="close">
@@ -53,21 +53,21 @@ const Modal = ({ onPutPost, isVisible, closeModal }) => {
 						</div>
 					</div>
 					<div className="modal-body">
-						<img src={data.image_url} className="image" alt="image_url"></img>
+						<img src={getPostsList.image_url} className="image" alt="image_url"></img>
 						<div className="comment">
 							<div className="subject">
 								<span>Comment</span>
 								<span>|</span>
 							</div>
-							<div className="sentence">{data.comment}</div>
+							<div className="sentence">{getPostsList.comment}</div>
 						</div>
 					</div>
 					<div className="modal-footer">
 						<div className="writer">
 							<div className="profile-img">PROFILE IMG</div>
 							<div className="profile-info">
-								<div>{data.writer.nickname}</div>
-								<div>{data.writer.email}</div>
+								<div>{getPostsList.writer.nickname}</div>
+								<div>{getPostsList.writer.email}</div>
 							</div>
 						</div>
 						<div>
