@@ -50,7 +50,6 @@ const Write = () => {
 	}
 
 	const handleWriteSubmit = () => {
-
 		addPosts(postForm)
 	}
 
