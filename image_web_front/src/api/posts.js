@@ -26,3 +26,13 @@ const Image_Route = "uploads";
 export const addPostsImage = (upLoadData) => {
 	return axios.post(`http://${URL}:${image_port}/${Image_Route}`, upLoadData);
 }
+
+const Image_List = "filelist";
+
+export const getPostsImageList = () => {
+	return axios.post(`http://${URL}:${image_port}/${Image_List}`);
+}
+
+export const getPostsImageFile = ( fileName ) => {
+	return axios.post(`http://${URL}:${image_port}/${Image_List}/${fileName}`);
+}

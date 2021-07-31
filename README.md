@@ -7,7 +7,7 @@ Json-Server와 간단한 node.js 서버로 Front end를 중심적으로 제작<b
 ### Available Scripts
 실행방법 Json Placeholder에서 제공하는 Json-Sever를 사용했으며 이미지를 public 폴더로 전송해주는 것은 node.js를 사용<br>
 Json-server : data.json의 정보를 Json 형식으로 뿌려준다.<br>
-node.js : formData로 이미지를 받으면 imgss 라는 폴더로 저장한다.<br>
+node.js : formData로 이미지를 받으면 upload_imgs 라는 폴더로 저장한다.<br>
 (리액트에서 public 폴더의 변경을 감지해 새로고침을 해주기 때문에 Public 폴더 바깥으로 변경했다.)<br>
 react : 프론트 서버 구동<br>
 
@@ -32,8 +32,8 @@ localhost:8000 으로 Json-Server가 구동이 되면 성공 <br>
  yarn uploads run
 ```
 localhost:7000 으로 node.js 서버가 구동이 되면 성공<br>
-/filelist : imgss directory 안에 있는 파일이름을 리스트로 제공<br>
-/filelost/$(파일이름) : imgss 폴더 안에 $(파일이름)과 매치된 파일을 Jpeg 이미지 파일로 제공<br>
+/filelist : upload_imgs directory 안에 있는 파일이름을 리스트로 제공<br>
+/filelost/$(파일이름) : upload_imgs 폴더 안에 $(파일이름)과 매치된 파일을 Jpeg 이미지 파일로 제공<br>
 
 ```bash
  yarn start

@@ -17,6 +17,7 @@ const slice = createSlice({
 	reducers : {
 		setKeyword( state, {payload}) {
 			state.keyword = payload.data
+			state.List = []
 		},
 
 		getPosts( state ) {

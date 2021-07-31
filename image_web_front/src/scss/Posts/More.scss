@@ -1,4 +1,21 @@
+.more-template {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 0 80px 0;
+}
+
 .more-btn {
-	position: absolute;
+	--shadow-color: #00000029;
+
+	box-shadow: 3px 3px 10px 0 var(--shadow-color);
+	width: 120px;
+	height: 50px;
+	font-size: 14px;
+	border-radius: 12px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	z-index: 1;
 }

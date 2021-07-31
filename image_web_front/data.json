@@ -145,7 +145,7 @@
       "image_url": "http://localhost:3000/upload_img/img-1627042640732.jpeg",
       "comment": "창문으로 들어오는 빛 방 안에 그림자와 대비",
       "tag": "그레이",
-      "isLike": false,
+      "isLike": true,
       "countLike": 0,
       "writer": {
         "id": 2,

@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { postsAction } from './postSlice';
 import PhotoList from './PhotoList';
-import More from './More';
+//import More from './More';
 
 const Posts = () => {
 	const current_page = useSelector((state) => state.posts.current_page);
@@ -28,9 +28,10 @@ const Posts = () => {
 	return (
 		<div>
 			<div className="PhotoContainer">
-				<PhotoList/>
-				<More onSetCurrentPage={onSetCurrentPage}
+				<PhotoList onSetCurrentPage={onSetCurrentPage}
 							current_page={current_page}/>
+				{/*<More onSetCurrentPage={onSetCurrentPage}
+							current_page={current_page}/>*/}
 			</div>
 		</div>
 	);

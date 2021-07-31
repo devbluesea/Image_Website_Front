@@ -6,11 +6,10 @@ import Search from './Search';
 import '../../scss/Posts/PhotoList.scss';
 import { postsAction } from './postSlice';
 import { commentsAction } from '../comments/commentsSlice';
-import axios from 'axios';
+import More from './More';
 
-const PhotoList = () => {
+const PhotoList = ( {onSetCurrentPage, current_page }) => {
 	const [isVisible, setIsVisible] = useState(false);
-	const [fileList, setFileList] = useState([]);
 	//const [totalCount, setTotalCount] = useState(null);
 	const dispatch = useDispatch();
 	const getPostsList = useSelector((state) => state.posts.List);
@@ -54,11 +53,15 @@ const PhotoList = () => {
 					<Search></Search>
 				</div>
 				<div className="frame">{ getPostsList?.map((post) => {
-					return <PhotoItem key={post.id} post = {post} onSetPostIndex={ () => {onSetPostIndex(post.id) }} fileList = {fileList}/>}) }
+					return <PhotoItem key={post.id} post = {post} onSetPostIndex={ () => {onSetPostIndex(post.id) }}/>}) }
 				</div>
 				<div className="modal">
 					{getPostsList?.length ?	<Modal onPutPost={onPutPost} isVisible={isVisible} closeModal={setIsVisible} /> : '' }
 				</div>
+				<div>
+					<More onSetCurrentPage={onSetCurrentPage}
+								current_page={current_page}/>
+					</div>
 			</div>
 		</div>
 	);

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../scss/Posts/PhotoItem.scss';
 
-const PhotoItem = ({ post , onSetPostIndex, fileList }) => {
+const PhotoItem = ({ post , onSetPostIndex }) => {
 	return (
 		<div className="PhotoItem-template" onClick={onSetPostIndex}>
 			<div className="wrapper">

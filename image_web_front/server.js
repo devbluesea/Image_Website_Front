@@ -7,7 +7,7 @@ var imgList;
 
 var fs = require('fs');
 
-fs.readdir('../imgss',function(err,filelist)
+fs.readdir('../upload_imgs',function(err,filelist)
 	{
 		imgList = filelist;
 		console.log(filelist);
@@ -15,7 +15,7 @@ fs.readdir('../imgss',function(err,filelist)
 );
 
 let reload = () => {
-	fs.readdir('../imgss',function(err,filelist)
+	fs.readdir('../upload_imgs',function(err,filelist)
 		{
 			imgList = filelist;
 			console.log(filelist);
@@ -24,7 +24,7 @@ let reload = () => {
 };
 
 //let uploadDir = path.join( __dirname , './public/upload_img/' );
-let uploadDir = path.join( __dirname , '../imgss' );
+let uploadDir = path.join( __dirname , '../upload_imgs' );
 
 
 let storage = multer.diskStorage({
@@ -54,7 +54,7 @@ app.get('/filelist' , (_ , res) => {
 
 app.get('/filelist/:filename' , (req , res) => {
 	reload();
-	fs.readFile(`../imgss/${req.params.filename}`, function (error, data) {
+	fs.readFile(`../upload_imgs/${req.params.filename}`, function (error, data) {
 		res.writeHead(200, {'Content-Type': 'image/jpeg'});
 		res.end(data);
 	});
