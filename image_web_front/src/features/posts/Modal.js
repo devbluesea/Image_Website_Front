@@ -37,7 +37,8 @@ const Modal = ({ onPutPost, isVisible, closeModal }) => {
 
 	if (data != null) {
 		return (
-			<div className="modal-template" data-visible={isVisible}>
+			<div className="modal-background" data-visible={isVisible}>
+			<div className="modal-template" >
 				<div className="wrapper">
 					<div className="modal-header">
 						<div className="like">
@@ -96,6 +97,7 @@ const Modal = ({ onPutPost, isVisible, closeModal }) => {
 						</div>
 					</div>
 				</div>
+			</div>
 			</div>
 		);
 	}
