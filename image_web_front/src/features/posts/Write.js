@@ -9,6 +9,7 @@ const Write = () => {
 	const [postForm, setPostForm] = useState(PostForm);
 	const loginInfo = useSelector( (state) => state.users)
 	const [image, setImage] = useState("")
+	const [upLoadSuccess, setUpLoadSuccess] = useState(false)
 
 	const onFileChange = (e) => {
 		const { target : {files} } = e;
@@ -35,9 +36,10 @@ const Write = () => {
 		addPostsImage(formData).then(res => {
 			setPostForm({
 				...postForm,
-				image_url: `http://localhost:3000/upload_img/${res.data.image_url}`
+				image_url: `http://localhost:7000/filelist/${res.data.image_url}`
 			});
-		})
+		});
+		setUpLoadSuccess(true);
 	};
 
 	const handleCommentChange = (e) => {
@@ -50,7 +52,21 @@ const Write = () => {
 	}
 
 	const handleWriteSubmit = () => {
-		addPosts(postForm)
+		if (!upLoadSuccess) {
+			alert("이미지를 등록하세요")
+		}
+		else if (!postForm.comment) {
+			alert("comment를 입력하세요")
+		}
+		else if (!postForm.tag) {
+			alert("tag를 입력하세요")
+		}
+		else {
+			addPosts(postForm).then(
+				alert("글쓰기 완료"),
+				window.location = '/'
+			);
+		}
 	}
 
 
@@ -63,7 +79,9 @@ const Write = () => {
 					</div>
 					<div className="input">
 						<div><input type="file" name="imageUpload" onChange={onFileChange}/></div>
-						<button className="imgsubmit" onClick={() => {handleChangeForm(upLoadFileForm)}}>업로드</button>
+						{ upLoadSuccess ? <div className="state-true">이미지가 업로드 되었습니다.</div>
+						: <div className="state-false">이미지를 업로드 해주세요.</div> }
+						{image && <button className="imgsubmit" onClick={() => {handleChangeForm(upLoadFileForm)}}>업로드</button>}
 					</div>
 				</div>
 				<div className="texts">

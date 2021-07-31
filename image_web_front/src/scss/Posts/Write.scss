@@ -1,5 +1,7 @@
 .Write-template {
 	--shadow-color: #00000029;
+	--upload-success: green;
+	--upload-fail: red;
 
 	width: 800px;
 	height: 500px;
@@ -40,6 +42,19 @@
 	left: 30px;
 }
 
+.Write-template .wrapper .input .state-true {
+	font-size: 10px;
+	margin-top: 5px;
+	color: var(--upload-success);
+}
+
+.Write-template .wrapper .input .state-false {
+	font-size: 10px;
+	margin-top: 5px;
+	color: var(--upload-fail);
+}
+
+
 .Write-template .wrapper .input .imgsubmit {
 	width: 45px;
 	height: 45px;
@@ -50,7 +65,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 20px auto 0 auto;
+	margin: 10px auto 0 auto;
 	color: rgb(59, 59, 59);
 	cursor: pointer;
 }

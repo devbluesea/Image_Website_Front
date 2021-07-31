@@ -260,6 +260,96 @@
         "id": 11
       },
       "id": 15
+    },
+    {
+      "image_url": "http://localhost:7000/filelist/img-1627748046476.jpeg",
+      "comment": "글 쓰기 테스트",
+      "tag": "테스트",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "email": "br1992ay@gmail.com",
+        "name": "백승우",
+        "nickname": "팅우",
+        "password": "111",
+        "id": 11
+      },
+      "id": 16
+    },
+    {
+      "image_url": "http://localhost:7000/filelist/img-1627748165435.jpeg",
+      "comment": "이미지 테스트",
+      "tag": "테스트",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "email": "br1992ay@gmail.com",
+        "name": "백승우",
+        "nickname": "팅우",
+        "password": "111",
+        "id": 11
+      },
+      "id": 17
+    },
+    {
+      "image_url": "http://localhost:7000/filelist/img-1627749386202.jpeg",
+      "comment": "asds",
+      "tag": "sdfsd",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "email": "br1992ay@gmail.com",
+        "name": "백승우",
+        "nickname": "팅우",
+        "password": "111",
+        "id": 11
+      },
+      "id": 18
+    },
+    {
+      "image_url": "http://localhost:7000/filelist/img-1627749489604.jpeg",
+      "comment": "글쓰기3",
+      "tag": "12",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "email": "br1992ay@gmail.com",
+        "name": "백승우",
+        "nickname": "팅우",
+        "password": "111",
+        "id": 11
+      },
+      "id": 19
+    },
+    {
+      "image_url": "http://localhost:7000/filelist/img-1627750024435.jpeg",
+      "comment": "예쁜 바다",
+      "tag": "바다",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "email": "br1992ay@gmail.com",
+        "name": "백승우",
+        "nickname": "팅우",
+        "password": "111",
+        "id": 11
+      },
+      "id": 20
+    },
+    {
+      "image_url": "http://localhost:7000/filelist/img-1627750075187.jpeg",
+      "comment": "캘리포니아 바닷가",
+      "tag": "블루",
+      "isLike": false,
+      "countLike": 0,
+      "writer": {
+        "email": "br1992ay@gmail.com",
+        "name": "백승우",
+        "nickname": "팅우",
+        "password": "111",
+        "id": 11
+      },
+      "id": 21
     }
   ],
   "comments": [
