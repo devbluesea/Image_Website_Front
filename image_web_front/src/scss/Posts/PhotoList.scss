@@ -6,7 +6,9 @@
 	height: var(--photoList-height);
 	//background:tan;
 	margin: 0 auto;
+	transition: 0.5s;
 }
+
 
 .PhotoList-template .wrapper {
 }
@@ -26,6 +28,45 @@
 	justify-content: space-between;
 	margin: 20px 0 0;
 	padding: 0 10px 0;
+}
+
+@media (max-width: 824px) {
+	.PhotoList-template {
+		--photoList-width: 540px;
+
+		width: var(--photoList-width);
+		height: var(--photoList-height);
+		//background:tan;
+		margin: 0 auto;
+		transition: 0.5s;
+	}
+
+	.PhotoList-template .wrapper .frame {
+		flex-wrap: wrap;
+		//overflow: visible;
+		//background: teal;
+		margin: 20px auto;
+		padding: 0 10px 0;
+  }
+}
+
+@media (max-width: 756px) {
+	.PhotoList-template {
+		--photoList-width: 250px;
+
+		width: var(--photoList-width);
+		height: var(--photoList-height);
+		//background:tan;
+		margin: 0 auto;
+		transition: 0.5s;
+	}
+
+	.PhotoList-template .wrapper .frame {
+		flex-wrap: wrap;
+		//overflow: visible;
+		//background: teal;
+		margin: 20px auto;
+  }
 }
 
 .PhotoList-template .wrapper .modal {

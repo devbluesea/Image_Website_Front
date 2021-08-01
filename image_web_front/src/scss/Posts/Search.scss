@@ -1,9 +1,13 @@
+.Search-template {
+}
+
 .Search-template .input {
 	width: 500px;
 	height: 35px;
 	border: none;
 	border-radius: 20px;
 	background-color: rgb(241, 241, 241);
+	transition: 0.5s;
 }
 
 .Search-template .btn {
@@ -14,4 +18,26 @@
 	width: 38px;
 	border: 1px solid;
 	border-radius: 50%;
+}
+
+@media (max-width: 824px) {
+	.Search-template .input {
+		width: 360px;
+		height: 35px;
+		border: none;
+		border-radius: 20px;
+		background-color: rgb(241, 241, 241);
+		transition: 0.5s;
+  }
+}
+
+@media (max-width: 756px) {
+	.Search-template .input {
+		width: 130px;
+		height: 35px;
+		border: none;
+		border-radius: 20px;
+		background-color: rgb(241, 241, 241);
+		transition: 0.5s;
+  }
 }
