@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { UploadForm, PostForm } from '../../util/Forms';
 import { addPostsImage, addPosts } from '../../api/posts';
 import { useSelector } from 'react-redux';
+import { getCookie } from '../../util/CookieUtil';
 import '../../scss/Posts/Write.scss';
 
 const Write = () => {
@@ -10,6 +11,7 @@ const Write = () => {
 	const loginInfo = useSelector( (state) => state.users)
 	const [image, setImage] = useState("")
 	const [upLoadSuccess, setUpLoadSuccess] = useState(false)
+	const loginCookie = getCookie("loginInfo");
 
 	const onFileChange = (e) => {
 		const { target : {files} } = e;
@@ -26,8 +28,16 @@ const Write = () => {
 	}
 }
 
-	if (loginInfo.isLogin === false) {
+	if (loginInfo.isLogin === false && loginCookie > 0 ) {
+		console.log("setIsLogin")
+		console.log("isLogin :", loginInfo.isLogin);
+		console.log("Cookie : ", loginCookie);
+	}
+
+	if (loginInfo.isLogin === false && !(loginCookie > 0)) {
 		window.location = '/';
+		console.log("isLogin : ", loginInfo.isLogin);
+		console.log("Cookie : ", loginCookie);
 	}
 
 	const handleChangeForm = (data) => {
@@ -52,8 +62,11 @@ const Write = () => {
 	}
 
 	const handleWriteSubmit = () => {
-		if (!upLoadSuccess) {
+		if (!upLoadSuccess && !image) {
 			alert("이미지를 등록하세요")
+		}
+		else if (!upLoadSuccess && image) {
+			alert("업로드 버튼을 누르세요")
 		}
 		else if (!postForm.comment) {
 			alert("comment를 입력하세요")

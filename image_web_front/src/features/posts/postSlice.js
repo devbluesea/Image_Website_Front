@@ -20,6 +20,10 @@ const slice = createSlice({
 			state.List = []
 		},
 
+		setList(state, {payload}) {
+			state.List = payload.data
+		},
+
 		getPosts( state ) {
 			state.posts = reducerUtils.loading()
 		},

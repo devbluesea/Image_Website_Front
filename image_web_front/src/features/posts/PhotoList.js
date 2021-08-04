@@ -7,6 +7,7 @@ import '../../scss/Posts/PhotoList.scss';
 import { postsAction } from './postSlice';
 import { commentsAction } from '../comments/commentsSlice';
 import More from './More';
+import { getCookie } from '../../util/CookieUtil';
 
 const PhotoList = ( {onSetCurrentPage, current_page }) => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -46,11 +47,16 @@ const PhotoList = ( {onSetCurrentPage, current_page }) => {
 		dispatch(postsAction.putPost(requestData));
 	}
 
+	//const onSetList = () =>{
+	//	console.log(getCookie("loginInfo"));
+  //}
+
 	return (
 		<div className="PhotoList-template">
 			<div className="wrapper">
+				{/*<div onClick={() => onSetList()}>data</div>*/}
 				<div className="search">
-					<Search></Search>
+					<Search/>
 				</div>
 				<div className="frame">{ getPostsList?.map((post) => {
 					return <PhotoItem key={post.id} post = {post} onSetPostIndex={ () => {onSetPostIndex(post.id) }}/>}) }

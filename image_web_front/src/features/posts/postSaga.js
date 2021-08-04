@@ -62,12 +62,17 @@ function* watchPutPostSuccess() {
 	yield takeLatest( postsAction.putPostSuccess, updatePost);
 }
 
+function* watchSetList() {
+	yield takeLatest( postsAction.setList, getPosts);
+}
+
 export function* postsSaga() {
 	yield all([
 		fork(watchGetPosts),
 		fork(watchPutPost),
 		fork(watchSetKeyword),
 		fork(watchGetPost),
-		fork(watchPutPostSuccess)
+		fork(watchPutPostSuccess),
+		fork(watchSetList)
 	])
 }

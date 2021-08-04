@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { postsAction } from './postSlice';
 import PhotoList from './PhotoList';
 import '../../scss/Posts/Post.scss';
+import { setCookie } from '../../util/CookieUtil';
 //import More from './More';
 
 const Posts = () => {
@@ -24,8 +25,14 @@ const Posts = () => {
 		dispatch(postsAction.setCurrentPage( _page ));
 	}
 
+	const onClick = () => {
+		setCookie("loginInfo",null, 1);
+		console.log("setCookie");
+	}
+
 	return (
 		<div className="Post-template">
+			<div onClick={onClick}>data</div>
 			<div className="container">
 				<PhotoList onSetCurrentPage={onSetCurrentPage}
 							current_page={current_page}/>

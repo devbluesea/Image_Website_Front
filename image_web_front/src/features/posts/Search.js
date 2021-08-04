@@ -20,12 +20,11 @@ const Search = () => {
 
 	const handleSearchClick = ( data ) => {
 		dispatch(postsAction.setKeyword(data));
-		console.log(data);
 	}
 
 	return (
 		<div className="Search-template">
-			<input className="input" type="text" name="tag" placeholder="       이미지 태그 검색" onChange={handleChangeSearchForm} value={keyword}></input>
+			<input className="input" type="text" name="tag" placeholder="       이미지 태그 검색" onChange={handleChangeSearchForm} value={keyword ? keyword : ""}></input>
 			<button className="btn" onClick={() => {handleSearchClick(searchForm)}}>검색</button>
 		</div>
 	);
