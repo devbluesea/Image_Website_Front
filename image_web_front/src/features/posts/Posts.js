@@ -4,7 +4,7 @@ import { postsAction } from './postSlice';
 import PhotoList from './PhotoList';
 import '../../scss/Posts/Post.scss';
 import { getCookie, setCookie } from '../../util/CookieUtil';
-//import More from './More';
+import GetLogin from '../login/GetLogin';
 
 const Posts = () => {
 	const current_page = useSelector((state) => state.posts.current_page);
@@ -38,13 +38,14 @@ const Posts = () => {
 
 	return (
 		<div className="Post-template">
-			<div onClick={onClick}>set Cookie null</div>
-			<div onClick={onData}>login Data</div>
+			<div>
+				<GetLogin/>
+				<div onClick={onClick}>set Cookie null</div>
+				<div onClick={onData}>login Data</div>
+			</div>
 			<div className="container">
 				<PhotoList onSetCurrentPage={onSetCurrentPage}
 							current_page={current_page}/>
-				{/*<More onSetCurrentPage={onSetCurrentPage}
-							current_page={current_page}/>*/}
 			</div>
 		</div>
 	);

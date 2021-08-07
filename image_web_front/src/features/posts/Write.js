@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { UploadForm, PostForm } from '../../util/Forms';
 import { addPostsImage, addPosts } from '../../api/posts';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { getCookie } from '../../util/CookieUtil';
+import { usersAction } from '../users/usersSlice';
+import { getUsersById } from '../../api/users';
 import '../../scss/Posts/Write.scss';
 
 const Write = () => {
@@ -12,6 +14,23 @@ const Write = () => {
 	const [image, setImage] = useState("")
 	const [upLoadSuccess, setUpLoadSuccess] = useState(false)
 	const loginCookie = getCookie("loginInfo");
+
+	let loginForm = {};
+
+	const dispatch = useDispatch();
+
+	getUsersById(loginCookie).then((res) => {
+		loginForm = {
+			email : res.data.email,
+			password : res.data.password
+		}
+	});
+
+
+	useEffect( () => {
+		dispatch(usersAction.getUsers(loginForm));
+	}, [dispatch])
+
 
 	const onFileChange = (e) => {
 		const { target : {files} } = e;
