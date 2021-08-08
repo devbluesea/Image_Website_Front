@@ -24,8 +24,10 @@ const Search = () => {
 
 	return (
 		<div className="Search-template">
-			<input className="input" type="text" name="tag" placeholder="       이미지 태그 검색" onChange={handleChangeSearchForm} value={keyword ? keyword : ""}></input>
+			{/*<input className="input" type="text" name="tag" placeholder="       이미지 태그 검색" onChange={handleChangeSearchForm} value={keyword ? keyword : ""}></input>*/}
+			<input className="input" type="text" name="tag" placeholder="       이미지 태그 검색 " onChange={handleChangeSearchForm} value={searchForm.tag}></input>
 			<button className="btn" onClick={() => {handleSearchClick(searchForm)}}>검색</button>
+			<div className="tag-ex">검색예시 : 레드, 블루, 화이트 ..</div>
 		</div>
 	);
 };
