@@ -7,6 +7,10 @@ import '../../scss/Posts/PhotoList.scss';
 import { postsAction } from './postSlice';
 import { commentsAction } from '../comments/commentsSlice';
 import More from './More';
+import { LoginForm } from '../../util/Forms';
+import { usersAction } from '../users/usersSlice';
+import { getCookie } from '../../util/CookieUtil';
+import { getUsersById } from '../../api/users';
 
 const PhotoList = ( {onSetCurrentPage, current_page }) => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -14,6 +18,8 @@ const PhotoList = ( {onSetCurrentPage, current_page }) => {
 	const dispatch = useDispatch();
 	const getPostsList = useSelector((state) => state.posts.List);
 	const pageItemNumber = 9;
+	let loginForm = {LoginForm};
+	const loginCookie = getCookie("loginInfo");
 
 	useEffect( () => {
 		dispatch(postsAction.getPosts({
@@ -46,13 +52,31 @@ const PhotoList = ( {onSetCurrentPage, current_page }) => {
 		dispatch(postsAction.putPost(requestData));
 	}
 
+	if (loginCookie !== "null") {
+		getUsersById(loginCookie).then((res) => {
+			loginForm = {
+				email : res.data.email,
+				password : res.data.password
+			}
+		});
+	}
+
+	const handleModalLogin = (data) => {
+		if (loginForm.email && loginForm.password) {
+			dispatch(usersAction.getUsers(data));
+		}
+		else {
+			console.log("empty")
+		}
+	}
+
 	return (
 		<div className="PhotoList-template">
 			<div className="wrapper">
 				<div className="search">
 					<Search/>
 				</div>
-				<div className="frame">{ getPostsList?.map((post) => {
+				<div className="frame" onClick={() => handleModalLogin(loginForm)}>{ getPostsList?.map((post) => {
 					return <PhotoItem key={post.id} post = {post} onSetPostIndex={ () => {onSetPostIndex(post.id) }}/>}) }
 				</div>
 				<div className="modal">

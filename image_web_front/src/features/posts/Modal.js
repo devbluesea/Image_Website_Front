@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CommentForm } from '../../util/Forms';
 import { commentsAction } from '../comments/commentsSlice';
-import { getCookie } from '../../util/CookieUtil';
-import { getUsersById } from '../../api/users';
-import { usersAction } from '../users/usersSlice';
 import '../../scss/Posts/Modal.scss';
 import likeStar from '../../images/star.png';
 import likeStarYellow from '../../images/star_yellow.png';
@@ -15,21 +12,6 @@ const Modal = ({ onPutPost, isVisible, closeModal }) => {
 	const commentsData = useSelector( (state) => state.comments.comments.data)
 	const [commentInputForm, setCommentInputForm] = useState(CommentForm)
 	const dispatch = useDispatch();
-	const loginCookie = getCookie("loginInfo");
-
-	let loginForm = {};
-
-	getUsersById(loginCookie).then((res) => {
-		loginForm = {
-			email : res.data.email,
-			password : res.data.password
-		}
-	});
-
-	useEffect( () => {
-		dispatch(usersAction.getUsers(loginForm));
-	}, [dispatch])
-
 
 	const handleChangeForm = (e) => {
 		setCommentInputForm({

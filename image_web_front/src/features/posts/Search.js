@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { postsAction } from './postSlice';
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { SearchForm } from '../../util/Forms';
 import '../../scss/Posts/Search.scss'
 
@@ -8,7 +8,6 @@ const Search = () => {
 
 	const dispatch = useDispatch();
 	const [searchForm, setSearchTag] = useState(SearchForm);
-	const { keyword } = useSelector( state => state.posts )
 
 	const handleChangeSearchForm = (e) => {
 		const {value, name} = e.target;
