@@ -7,6 +7,7 @@ import '../../scss/Signup/Signup.scss';
 
 const SignUp = () => {
 	const [registerForm, setRegisterForm] = useState(RegisterForm);
+	const [passwordCheck, setPasswordCheck] = useState("");
 
 	const handleChangeForm = (e) => {
 		const {value, name} = e.target;
@@ -16,16 +17,42 @@ const SignUp = () => {
 		});
 	};
 
+	const handleChangePasswordCheck = (e) => {
+		setPasswordCheck(e.target.value);
+	}
+
 	const dispatch = useDispatch();
 
 	const handleSubmit = (data) => {
-		dispatch(usersAction.addUsers(data))
+		if (!registerForm.email) {
+			alert("email을 입력하세요")
+		}
+		else if (!registerForm.name) {
+			alert("이름을 입력하세요")
+		}
+		else if (!registerForm.nickname) {
+			alert("닉네입을 입력하세요")
+		}
+		else if (!registerForm.password) {
+			alert("비밀번호를 입력하세요")
+		}
+		else if (!passwordCheck) {
+			alert("비밀번호를 다시 한 번 입력하세요")
+		}
+		else if (registerForm.password !== passwordCheck) {
+			alert("비밀번호가 같지 않습니다.")
+		}
+		else {
+			alert("회원가입 완료");
+			dispatch(usersAction.addUsers(data));
+			window.location = '/';
+		}
 	}
 
 	return (
 		<div className="signup-template">
-			<form onSubmit={() => handleSubmit(registerForm)}>
-			<div className="header">Like Pinterest 회원가입</div>
+			<div>
+				<div className="header">Like Pinterest 회원가입</div>
 				<div className="wrapper">
 					<div className="email">
 						<input className="email-input" placeholder="  이메일 주소" name="email" value={registerForm.email} onChange={handleChangeForm}/>
@@ -37,15 +64,13 @@ const SignUp = () => {
 						<input className="nickname-input" placeholder="  닉네임" name="nickname" value={registerForm.nickname} onChange={handleChangeForm}/>
 					</div>
 					<div className="password">
-						<input className="password-input" placeholder="  비밀번호" name="password" value={registerForm.password} onChange={handleChangeForm}/>
+						<input className="password-input" type="password" placeholder="  비밀번호" name="password" value={registerForm.password} onChange={handleChangeForm}/>
 					</div>
 					<div className="password-check">
-						<input className="password-check-input" placeholder="  비밀번호 확인"/>
+						<input className="password-check-input" type="password" placeholder="  비밀번호 확인" value={passwordCheck} onChange={handleChangePasswordCheck}/>
 					</div>
 					<div className="submit">
-						<Link className="link" to="/login">
-							<button className="submit-btn">회원가입</button>
-						</Link>
+						<button className="submit-btn" onClick={() => handleSubmit(registerForm)}>회원가입</button>
 					</div>
 					<div className="to-login">
 						<span className="signage">아이디가 있으세요?</span>
@@ -54,7 +79,7 @@ const SignUp = () => {
 						</Link>
 					</div>
 				</div>
-			</form>
+			</div>
 		</div>
 	);
 };

@@ -48,6 +48,13 @@
       "nickname": "15",
       "password": "1234",
       "id": 16
+    },
+    {
+      "email": "16@naver.com",
+      "name": "고양이",
+      "nickname": "나비",
+      "password": "111",
+      "id": 17
     }
   ],
   "posts": [

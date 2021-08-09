@@ -20,6 +20,12 @@
 	border-radius: 50%;
 }
 
+.Search-template .tag-ex {
+	margin: 5px 0 0;
+	color: rgb(165, 165, 165);
+	font-size: 11px;
+}
+
 @media (max-width: 824px) {
 	.Search-template .input {
 		width: 360px;

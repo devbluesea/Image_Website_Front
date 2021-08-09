@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import '../../scss/NavBar/MyPage.scss';
 
 const MyPage = () => {
-	const loginInfo = useSelector( (state) => state.users)
 
 	return (
 		<div className="MyPage-template">

@@ -11,3 +11,7 @@ export const addUsers = (data) => {
 export const getUsers = (data) => {
 	return axios.get(`http://${post_URL}:${port}/${post_Route}`, { params : data});
 }
+
+export const getUsersById = (data) => {
+	return axios.get(`http://${post_URL}:${port}/${post_Route}/${data}`);
+}

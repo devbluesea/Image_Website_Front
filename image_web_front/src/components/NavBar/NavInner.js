@@ -3,15 +3,16 @@ import { useSelector } from 'react-redux';
 import '../../scss/NavBar/NavInner.scss'
 import SignInUp from './SignInUp';
 import MyPage from './MyPage';
+import { getCookie } from '../../util/CookieUtil';
 
 const NavInner = () => {
-
-	const isLogin = useSelector( (state) => state.users.isLogin );
+	const loginCookie = getCookie("loginInfo")
+	const loginInfo = useSelector( (state) => state.users)
 
 	return (
-		<div className = "nav-list" data-login={isLogin}>
-			<div className = 'nav-item menu-mypage'><MyPage/></div>
-			<div className = 'nav-item menu-login'><SignInUp/></div>
+		<div className = "nav-list" >
+			{loginCookie > 0 || loginInfo.isLogin ? <div className = 'nav-item menu-mypage'><MyPage/></div>:
+			<div className = 'nav-item menu-login'><SignInUp/></div>}
 		</div>
 	);
 };
