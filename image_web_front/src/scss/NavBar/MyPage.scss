@@ -9,3 +9,21 @@
 	text-decoration: none;
 	color: rgb(116, 116, 116);
 }
+
+.MyPage-template .menu {
+	display: block;
+	//background: wheat;
+	position: relative;
+}
+
+.MyPage-template .menu .list {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.MyPage-template .menu .underbar {
+		border-top: 3px solid;
+		position: relative;
+		top: 8px
+}

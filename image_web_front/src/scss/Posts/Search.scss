@@ -1,4 +1,5 @@
 .Search-template {
+	--shadow-color: #00000029;
 }
 
 .Search-template .input {
@@ -16,8 +17,15 @@
 	margin-left: 10px;
 	height: 38px;
 	width: 38px;
-	border: 1px solid;
+	border: none;
 	border-radius: 50%;
+	box-shadow: 3px 3px 10px 0 var(--shadow-color);
+	&:hover {
+		background: #f3f3f3;
+		transition: 0.3s;
+		filter: brightness(90%);
+		cursor: pointer;
+	}
 }
 
 .Search-template .tag-ex {

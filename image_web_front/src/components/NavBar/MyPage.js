@@ -7,10 +7,16 @@ const MyPage = () => {
 	return (
 		<div className="MyPage-template">
 			<Link className="link" to="/write">
-				<span>글쓰기</span>
+				<span className="menu">
+					<div className="list">글쓰기</div>
+					{/*<div className="underbar"></div>*/}
+				</span>
 			</Link>
 			<Link className="link" to="/mypage">
-				<span>내정보</span>
+				<span className="menu">
+					<div className="list">내정보</div>
+					{/*<div className="underbar"></div>*/}
+				</span>
 			</Link>
 		</div>
 	);

@@ -9,13 +9,20 @@
 	--shadow-color: #00000029;
 
 	box-shadow: 3px 3px 10px 0 var(--shadow-color);
-	width: 120px;
-	height: 50px;
+	color: rgb(99, 99, 99);
+	width: 60px;
+	height: 60px;
 	font-size: 14px;
-	border-radius: 12px;
+	border-radius: 50%;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	z-index: 1;
+	&:hover {
+		background: #f3f3f3;
+		transition: 0.3s;
+		filter: brightness(90%);
+		cursor: pointer;
+	}
 }
